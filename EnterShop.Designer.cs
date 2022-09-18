@@ -49,7 +49,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(42, 20);
+            this.label1.Location = new System.Drawing.Point(54, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(638, 67);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::carStore_Final.Properties.Resources.car2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(721, 608);
+            this.ClientSize = new System.Drawing.Size(760, 592);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "EnterShop";

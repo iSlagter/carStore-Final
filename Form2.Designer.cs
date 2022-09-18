@@ -235,6 +235,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
