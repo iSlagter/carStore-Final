@@ -26,5 +26,45 @@ namespace carStore_Final
         {
 
         }
+
+        private void BtnOrderJeep_Click(object sender, EventArgs e)
+        {
+            OrderJeep orderJeep = new OrderJeep();
+            orderJeep.ShowDialog();
+        }
+
+        private void BtnSaveOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnOrderPrivateCar_Click(object sender, EventArgs e)
+        {
+            OrderPrivateCar orderPrivateCar = new OrderPrivateCar();
+            orderPrivateCar.ShowDialog();
+        }
+
+        private void BtnOrderMotorcycle_Click(object sender, EventArgs e)
+        {
+            OrderMotorcycle orderMotorcycle = new OrderMotorcycle();
+            orderMotorcycle.ShowDialog();
+        }
+
+        private void BtnOrderBicycle_Click(object sender, EventArgs e)
+        {
+            OrderBicycle orderBicycle = new OrderBicycle();
+
+            orderBicycle.ShowDialog();
+        }
+
+        private void BtnLoadOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblTotalPrice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

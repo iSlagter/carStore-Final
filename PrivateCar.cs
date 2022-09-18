@@ -11,7 +11,7 @@ namespace carStore_Final
         //Getters && Setters
         public bool IsHybrid { get; set; }
 
-        public PrivateCar(bool IsHybrid, int DoorNumber, bool IsAC, bool IsMultimedia, double Price, string Make, string Model, string Year, string Description) : base(DoorNumber, IsAC, IsMultimedia, Price, Make,  Model, Year, Description)
+        public PrivateCar(bool IsHybrid, int DoorNumber, bool IsAC, bool IsMultimedia, string Make, string Model, string Year, double Price, string Description) : base(DoorNumber, IsAC, IsMultimedia, Make,  Model, Year, Price, Description)
         {
             this.IsHybrid = IsHybrid;
         }

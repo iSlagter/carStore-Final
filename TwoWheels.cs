@@ -13,7 +13,7 @@ namespace carStore_Final
         public bool IsEngine { get; set; }
         public string Color { get; set; }
                 
-        public TwoWheels(bool IsEngine, string Color, string Make, string Model, string Year, double Price, string Description) : base(Price, Make, Model, Year, Description)
+        public TwoWheels(bool IsEngine, string Color, double Price, string Make, string Model, string Year, string Description) : base(Make, Model, Year, Price, Description)
         {
             this.IsEngine = IsEngine;
             this.Color  = Color;

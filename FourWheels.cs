@@ -13,7 +13,7 @@ namespace carStore_Final
         public bool IsAC { get; set; }
         public bool IsMultimedia { get; set; }    
 
-        public FourWheels(int DoorNumber, bool IsAC, bool IsMultimedia, double Price, string Make, string Model, string Year, string Description) : base(Price, Make, Model, Year, Description)
+        public FourWheels(int DoorNumber, bool IsAC, bool IsMultimedia, string Make, string Model, string Year, double Price, string Description) : base(Make, Model, Year, Price, Description)
         {
             this.DoorNumber = DoorNumber;
             this.IsAC = IsAC;

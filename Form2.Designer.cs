@@ -33,14 +33,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.BtnOrderJeep = new System.Windows.Forms.Button();
+            this.BtnOrderPrivateCar = new System.Windows.Forms.Button();
+            this.BtnOrderMotorcycle = new System.Windows.Forms.Button();
+            this.BtnOrderBicycle = new System.Windows.Forms.Button();
+            this.BtnSaveOrder = new System.Windows.Forms.Button();
+            this.BtnLoadOrder = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.LblTotalPrice = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -94,59 +94,65 @@
             this.label5.Text = "carStore Bicycle - Popular Vehicle for Dutch pepole";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // button1
+            // BtnOrderJeep
             // 
-            this.button1.Location = new System.Drawing.Point(626, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 25);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Order Jeep";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnOrderJeep.Location = new System.Drawing.Point(626, 105);
+            this.BtnOrderJeep.Name = "BtnOrderJeep";
+            this.BtnOrderJeep.Size = new System.Drawing.Size(125, 25);
+            this.BtnOrderJeep.TabIndex = 5;
+            this.BtnOrderJeep.Text = "Order Jeep";
+            this.BtnOrderJeep.UseVisualStyleBackColor = true;
+            this.BtnOrderJeep.Click += new System.EventHandler(this.BtnOrderJeep_Click);
             // 
-            // button2
+            // BtnOrderPrivateCar
             // 
-            this.button2.Location = new System.Drawing.Point(628, 148);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 25);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Order Private Car";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnOrderPrivateCar.Location = new System.Drawing.Point(628, 148);
+            this.BtnOrderPrivateCar.Name = "BtnOrderPrivateCar";
+            this.BtnOrderPrivateCar.Size = new System.Drawing.Size(125, 25);
+            this.BtnOrderPrivateCar.TabIndex = 6;
+            this.BtnOrderPrivateCar.Text = "Order Private Car";
+            this.BtnOrderPrivateCar.UseVisualStyleBackColor = true;
+            this.BtnOrderPrivateCar.Click += new System.EventHandler(this.BtnOrderPrivateCar_Click);
             // 
-            // button3
+            // BtnOrderMotorcycle
             // 
-            this.button3.Location = new System.Drawing.Point(628, 192);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 25);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Order Motorcycle";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnOrderMotorcycle.Location = new System.Drawing.Point(628, 192);
+            this.BtnOrderMotorcycle.Name = "BtnOrderMotorcycle";
+            this.BtnOrderMotorcycle.Size = new System.Drawing.Size(125, 25);
+            this.BtnOrderMotorcycle.TabIndex = 7;
+            this.BtnOrderMotorcycle.Text = "Order Motorcycle";
+            this.BtnOrderMotorcycle.UseVisualStyleBackColor = true;
+            this.BtnOrderMotorcycle.Click += new System.EventHandler(this.BtnOrderMotorcycle_Click);
             // 
-            // button4
+            // BtnOrderBicycle
             // 
-            this.button4.Location = new System.Drawing.Point(628, 236);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 25);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Order Bicycle";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnOrderBicycle.Location = new System.Drawing.Point(628, 236);
+            this.BtnOrderBicycle.Name = "BtnOrderBicycle";
+            this.BtnOrderBicycle.Size = new System.Drawing.Size(125, 25);
+            this.BtnOrderBicycle.TabIndex = 8;
+            this.BtnOrderBicycle.Text = "Order Bicycle";
+            this.BtnOrderBicycle.UseVisualStyleBackColor = true;
+            this.BtnOrderBicycle.Click += new System.EventHandler(this.BtnOrderBicycle_Click);
             // 
-            // button5
+            // BtnSaveOrder
             // 
-            this.button5.Location = new System.Drawing.Point(161, 551);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 25);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Save Order";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnSaveOrder.Location = new System.Drawing.Point(161, 551);
+            this.BtnSaveOrder.Name = "BtnSaveOrder";
+            this.BtnSaveOrder.Size = new System.Drawing.Size(125, 25);
+            this.BtnSaveOrder.TabIndex = 9;
+            this.BtnSaveOrder.Text = "Save Order";
+            this.BtnSaveOrder.UseVisualStyleBackColor = true;
+            this.BtnSaveOrder.Click += new System.EventHandler(this.BtnSaveOrder_Click);
             // 
-            // button6
+            // BtnLoadOrder
             // 
-            this.button6.Location = new System.Drawing.Point(17, 551);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(125, 25);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Load Order";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnLoadOrder.Location = new System.Drawing.Point(17, 551);
+            this.BtnLoadOrder.Name = "BtnLoadOrder";
+            this.BtnLoadOrder.Size = new System.Drawing.Size(125, 25);
+            this.BtnLoadOrder.TabIndex = 10;
+            this.BtnLoadOrder.Text = "Load Order";
+            this.BtnLoadOrder.UseVisualStyleBackColor = true;
+            this.BtnLoadOrder.Click += new System.EventHandler(this.BtnLoadOrder_Click);
             // 
             // label6
             // 
@@ -158,15 +164,16 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Total Price:";
             // 
-            // label7
+            // LblTotalPrice
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(724, 551);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 27);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "0";
+            this.LblTotalPrice.AutoSize = true;
+            this.LblTotalPrice.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblTotalPrice.Location = new System.Drawing.Point(724, 551);
+            this.LblTotalPrice.Name = "LblTotalPrice";
+            this.LblTotalPrice.Size = new System.Drawing.Size(24, 27);
+            this.LblTotalPrice.TabIndex = 12;
+            this.LblTotalPrice.Text = "0";
+            this.LblTotalPrice.Click += new System.EventHandler(this.LblTotalPrice_Click);
             // 
             // textBox1
             // 
@@ -222,14 +229,14 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.LblTotalPrice);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnLoadOrder);
+            this.Controls.Add(this.BtnSaveOrder);
+            this.Controls.Add(this.BtnOrderBicycle);
+            this.Controls.Add(this.BtnOrderMotorcycle);
+            this.Controls.Add(this.BtnOrderPrivateCar);
+            this.Controls.Add(this.BtnOrderJeep);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -250,14 +257,14 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
+        private Button BtnOrderJeep;
+        private Button BtnOrderPrivateCar;
+        private Button BtnOrderMotorcycle;
+        private Button BtnOrderBicycle;
+        private Button BtnSaveOrder;
+        private Button BtnLoadOrder;
         private Label label6;
-        private Label label7;
+        private Label LblTotalPrice;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
