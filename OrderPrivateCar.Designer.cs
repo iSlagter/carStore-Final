@@ -53,6 +53,7 @@
             this.BtnSubmitPrivateCar.TabIndex = 1;
             this.BtnSubmitPrivateCar.Text = "Submit";
             this.BtnSubmitPrivateCar.UseVisualStyleBackColor = true;
+            this.BtnSubmitPrivateCar.Click += new System.EventHandler(this.BtnSubmitPrivateCar_Click);
             // 
             // checkedListBox1
             // 

@@ -101,6 +101,7 @@
             this.BtnSubmitJeep.TabIndex = 4;
             this.BtnSubmitJeep.Text = "Submit";
             this.BtnSubmitJeep.UseVisualStyleBackColor = true;
+            this.BtnSubmitJeep.Click += new System.EventHandler(this.BtnSubmitJeep_Click);
             // 
             // Btn4x4
             // 

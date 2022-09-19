@@ -11,7 +11,7 @@ namespace carStore_Final
         //Getters && Setters
         public bool Is4X4 { get; set; }
 
-        public JeepCar(bool Is4X4, int DoorNumber, bool IsAC, bool IsMultimedia, string Make, string Model, string Year, double Price, string Description) : base(DoorNumber, IsAC, IsMultimedia, Make,  Model, Year, Price, Description)
+        public JeepCar(bool Is4X4, int DoorNumber, bool IsAC, bool IsMultimedia, string Make, string Model, string Year, string Color, double Price, string Description) : base(DoorNumber, IsAC, IsMultimedia, Make,  Model, Year, Color, Price, Description)
         {
             this.Is4X4 = Is4X4;
         }

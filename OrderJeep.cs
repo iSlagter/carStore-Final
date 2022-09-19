@@ -26,5 +26,10 @@ namespace carStore_Final
         {
 
         }
+
+        private void BtnSubmitJeep_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

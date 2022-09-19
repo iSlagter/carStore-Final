@@ -11,17 +11,15 @@ namespace carStore_Final
 
         //Getters && Setters
         public bool IsEngine { get; set; }
-        public string Color { get; set; }
                 
-        public TwoWheels(bool IsEngine, string Color, double Price, string Make, string Model, string Year, string Description) : base(Make, Model, Year, Price, Description)
+        public TwoWheels(bool IsEngine, string Make, string Model, string Year, string Color, double Price, string Description) : base(Make, Model, Year, Color, Price, Description)
         {
             this.IsEngine = IsEngine;
-            this.Color  = Color;
         }
 
         public override string ToString()
         {
-            return "Base Type: Two Wheeles, IsEngine: " + IsEngine + ", color: " + Color + base.ToString();
+            return "Base Type: Two Wheeles, IsEngine: " + IsEngine + base.ToString();
         }
 
         //Return the price of the Two Color product

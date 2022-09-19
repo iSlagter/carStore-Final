@@ -11,7 +11,7 @@ namespace carStore_Final
         //Getters && Setters
         public bool IsMaunalGear { get; set; }
 
-        public Motorcycle(bool IsMaunalGear, bool IsEngine, string Color, double Price, string Make, string Model, string Year, string Description) : base(IsEngine, Color, Price, Make, Model, Year, Description)
+        public Motorcycle(bool IsMaunalGear, bool IsEngine, string Make, string Model, string Year, string Color, double Price, string Description) : base(IsEngine, Make, Model, Year, Color, Price, Description)
         {
             this.IsMaunalGear = IsMaunalGear;
         }

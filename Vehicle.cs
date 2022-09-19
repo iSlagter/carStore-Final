@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 /*+----------------------------------------------------------------------
  ||
- ||  Class Product
+ ||  Class Veichle
  ||
  ||         Author:  Dor Slagter 
  ||
@@ -24,7 +24,7 @@ using System.Threading.Tasks;
  ||
  ||   Constructors:  Vehicle(double Price, string Make, string Year, string Description, string Model)
  ||
- ||  Class Methods:  double Price(), string Model(), string Description(), int ProductId()
+ ||  Class Methods:  string Make(), string Model(), string Year(), double Price(), string Color(), string Description(), int ProductId()
  ||
  ||  Inst. Methods:  *static int count(), string ToString(), double CalculatePrice()
  ||
@@ -37,19 +37,21 @@ namespace carStore_Final
         private static int Count = 0;
 
         // Getters && Setters
-        public double Price { get; set; }
-        public string Model { get; set; }
         public string Make { get; set; }
+        public string Model { get; set; }
         public string Year { get; set; }
+        public string Color { get; set; }
+        public double Price { get; set; }
         public string Description { get; set; }
         public int ProductId { get; }
 
         // Constructor : Parameterized
-        public Vehicle(string Make, string Model, string Year, double Price, string Description)
+        public Vehicle(string Make, string Model, string Year, string Color, double Price, string Description)
         {
             this.Make = Make;
             this.Model = Model;
             this.Year = Year;
+            this.Color = Color;
             this.Price = Price;
             this.Description = Description;
             //The product id of the new product is the count number.
@@ -65,7 +67,7 @@ namespace carStore_Final
         // Overriding toString() method of String class
         public override string ToString()
         {
-            return "Make: " + Make + ", Model: " + Model + ", Year: " + Year + ", Price: " + Price + ", Description: " + Description + ", ProductId: " + ProductId;
+            return "Make: " + Make + ", Model: " + Model + ", Year: " + Year + ", Color: " + Color + ", Price: " + Price + ", Description: " + Description + ", ProductId: " + ProductId;
         }
         //Return the price of the product
         public virtual double CalculatePrice()

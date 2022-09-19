@@ -53,6 +53,7 @@
             this.BtnSubmitMotorcycle.TabIndex = 1;
             this.BtnSubmitMotorcycle.Text = "Submit";
             this.BtnSubmitMotorcycle.UseVisualStyleBackColor = true;
+            this.BtnSubmitMotorcycle.Click += new System.EventHandler(this.BtnSubmitMotorcycle_Click);
             // 
             // checkedListBox1
             // 
