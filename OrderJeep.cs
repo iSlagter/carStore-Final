@@ -27,10 +27,7 @@ namespace carStore_Final
             IsFilled += this.ChkBoxMakeAndModel.SelectedItem == null ? 1 : 0;
             IsFilled += this.ChkBoxYear.SelectedItem == null ? 1 : 0; 
             IsFilled += this.ChkBoxColor.SelectedItem == null ? 1 : 0;
-            IsFilled += this.Btn4x4.Checked == true ? 1 : 0;
-            IsFilled += this.BtnMetallicColor.Checked == true ? 1 : 0;
             IsFilled += this.ChkBoxDoorNumber.SelectedItem == null ? 1 : 0;
-            IsFilled += this.BtnIsMultimedia.Checked == true ? 1 : 0;
 
             return IsFilled == 0;
         }
@@ -50,13 +47,13 @@ namespace carStore_Final
             //Check that EverythingFilled and return true
             if (IsEverythingFilled())
             {
-                bool Is4X4 = this.Btn4x4.Checked;
+                bool Is4X4 = this.ChkBoxIs4x4.Checked;
                 var DoorNum = this.ChkBoxDoorNumber.SelectedItem.ToString();
                 string[] Number = DoorNum.Split(" ");
                 int DoorNumber = int.Parse(Number[0]);
                 bool IsAC = true;
-                bool IsMultimedia = this.BtnIsMultimedia.Checked;
-                bool IsMetallicColor = this.BtnMetallicColor.Checked;
+                bool IsMultimedia = this.ChkBoxIsMultimedia.Checked;
+                bool IsMetallicColor = this.ChkBoxIsMetallicColor.Checked;
                 var MakeAndModel = this.ChkBoxMakeAndModel.SelectedItem.ToString();
                 string[] MakeModel = MakeAndModel.Split(",");
                 string Make = MakeModel[0];
@@ -72,6 +69,232 @@ namespace carStore_Final
                 //Close the form
                 this.Close();
             }
+        }
+
+        //Fucntion to calculate the price of all the things that add to the product
+        private void CalculatePrice()
+        {
+            //this.Warning.Text = "";
+            int price = 0;
+            if (ChkBoxMakeAndModel.SelectedItem != null)
+            {
+                string Jeep = this.ChkBoxMakeAndModel.SelectedItem.ToString();
+                string year = this.ChkBoxYear.SelectedItem.ToString();
+
+
+                //Add the price by the Make, Model and Year of the Jeep
+                switch (Jeep)
+                {
+                    case "Toyota, Land Crusier":
+                        switch(year)
+                        {
+                            case "2015":
+                                price=99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    case "Toyota, Rav4":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    case "Mitsubishi, Pajero":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    case "Mitsubishi, Outlander":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    case "Jeep,Grand Cherokie":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    case "Jeep, Wrengler":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    case "Land Rover, Range Rover":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+            this.LblTotalPrice.Text = price.ToString();
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,6 +358,41 @@ namespace carStore_Final
                     ChkBoxDoorNumber.SetItemCheckState(x, CheckState.Unchecked);
                 }
             }
+        }
+
+        private void LblTotalPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void OnContentChanged(object sender, EventArgs e)
+        {
+            CalculatePrice();
+        }
+
+        private void OnContentChanged(object sender, ItemCheckEventArgs e)
+        {
+            CalculatePrice();
+        }
+
+        private void ChkBoxIs4x4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IsMetallicColor_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IsMultimedia_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChkBoxIsMetallicColor_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

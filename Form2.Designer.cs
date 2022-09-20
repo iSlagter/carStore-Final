@@ -158,7 +158,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(564, 552);
+            this.label6.Location = new System.Drawing.Point(503, 552);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 27);
             this.label6.TabIndex = 11;
@@ -168,7 +168,7 @@
             // 
             this.LblTotalPrice.AutoSize = true;
             this.LblTotalPrice.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblTotalPrice.Location = new System.Drawing.Point(724, 551);
+            this.LblTotalPrice.Location = new System.Drawing.Point(652, 552);
             this.LblTotalPrice.Name = "LblTotalPrice";
             this.LblTotalPrice.Size = new System.Drawing.Size(24, 27);
             this.LblTotalPrice.TabIndex = 12;
@@ -242,7 +242,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);

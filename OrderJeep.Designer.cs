@@ -33,10 +33,12 @@
             this.ChkBoxYear = new System.Windows.Forms.CheckedListBox();
             this.ChkBoxColor = new System.Windows.Forms.CheckedListBox();
             this.BtnSubmitJeep = new System.Windows.Forms.Button();
-            this.Btn4x4 = new System.Windows.Forms.RadioButton();
-            this.BtnMetallicColor = new System.Windows.Forms.RadioButton();
             this.ChkBoxDoorNumber = new System.Windows.Forms.CheckedListBox();
-            this.BtnIsMultimedia = new System.Windows.Forms.RadioButton();
+            this.TotalPriceTxt = new System.Windows.Forms.TextBox();
+            this.LblTotalPrice = new System.Windows.Forms.Label();
+            this.ChkBoxIs4x4 = new System.Windows.Forms.CheckBox();
+            this.ChkBoxIsMetallicColor = new System.Windows.Forms.CheckBox();
+            this.ChkBoxIsMultimedia = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -61,7 +63,7 @@
             "Jeep,Grand Cherokie",
             "Jeep, Wrengler ",
             "Land Rover, Range Rover"});
-            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(31, 175);
+            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(12, 98);
             this.ChkBoxMakeAndModel.Name = "ChkBoxMakeAndModel";
             this.ChkBoxMakeAndModel.Size = new System.Drawing.Size(198, 130);
             this.ChkBoxMakeAndModel.TabIndex = 1;
@@ -79,7 +81,7 @@
             "2020",
             "2021",
             "2022"});
-            this.ChkBoxYear.Location = new System.Drawing.Point(289, 175);
+            this.ChkBoxYear.Location = new System.Drawing.Point(239, 98);
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(120, 148);
             this.ChkBoxYear.TabIndex = 2;
@@ -100,7 +102,7 @@
             "Orange",
             "Gray",
             "Silver"});
-            this.ChkBoxColor.Location = new System.Drawing.Point(585, 175);
+            this.ChkBoxColor.Location = new System.Drawing.Point(516, 98);
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
@@ -116,52 +118,71 @@
             this.BtnSubmitJeep.UseVisualStyleBackColor = true;
             this.BtnSubmitJeep.Click += new System.EventHandler(this.BtnSubmitJeep_Click);
             // 
-            // Btn4x4
-            // 
-            this.Btn4x4.AutoSize = true;
-            this.Btn4x4.Location = new System.Drawing.Point(50, 369);
-            this.Btn4x4.Name = "Btn4x4";
-            this.Btn4x4.Size = new System.Drawing.Size(88, 19);
-            this.Btn4x4.TabIndex = 5;
-            this.Btn4x4.TabStop = true;
-            this.Btn4x4.Text = "4X4 version ";
-            this.Btn4x4.UseVisualStyleBackColor = true;
-            this.Btn4x4.CheckedChanged += new System.EventHandler(this.Btn4x4_CheckedChanged);
-            // 
-            // BtnMetallicColor
-            // 
-            this.BtnMetallicColor.AutoSize = true;
-            this.BtnMetallicColor.Location = new System.Drawing.Point(50, 400);
-            this.BtnMetallicColor.Name = "BtnMetallicColor";
-            this.BtnMetallicColor.Size = new System.Drawing.Size(99, 19);
-            this.BtnMetallicColor.TabIndex = 6;
-            this.BtnMetallicColor.TabStop = true;
-            this.BtnMetallicColor.Text = "Metallic Color";
-            this.BtnMetallicColor.UseVisualStyleBackColor = true;
-            this.BtnMetallicColor.CheckedChanged += new System.EventHandler(this.BtnMetallicColor_CheckedChanged);
-            // 
             // ChkBoxDoorNumber
             // 
             this.ChkBoxDoorNumber.FormattingEnabled = true;
             this.ChkBoxDoorNumber.Items.AddRange(new object[] {
             "3 Doors (Short)",
             "5 Doors (Long)"});
-            this.ChkBoxDoorNumber.Location = new System.Drawing.Point(440, 175);
+            this.ChkBoxDoorNumber.Location = new System.Drawing.Point(375, 98);
             this.ChkBoxDoorNumber.Name = "ChkBoxDoorNumber";
             this.ChkBoxDoorNumber.Size = new System.Drawing.Size(120, 40);
             this.ChkBoxDoorNumber.TabIndex = 7;
             this.ChkBoxDoorNumber.SelectedIndexChanged += new System.EventHandler(this.ChkBoxDoorNumber_SelectedIndexChanged);
             // 
-            // BtnIsMultimedia
+            // TotalPriceTxt
             // 
-            this.BtnIsMultimedia.AutoSize = true;
-            this.BtnIsMultimedia.Location = new System.Drawing.Point(52, 433);
-            this.BtnIsMultimedia.Name = "BtnIsMultimedia";
-            this.BtnIsMultimedia.Size = new System.Drawing.Size(124, 19);
-            this.BtnIsMultimedia.TabIndex = 8;
-            this.BtnIsMultimedia.TabStop = true;
-            this.BtnIsMultimedia.Text = "Multimedia Screen";
-            this.BtnIsMultimedia.UseVisualStyleBackColor = true;
+            this.TotalPriceTxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.TotalPriceTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TotalPriceTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TotalPriceTxt.Location = new System.Drawing.Point(15, 532);
+            this.TotalPriceTxt.Name = "TotalPriceTxt";
+            this.TotalPriceTxt.Size = new System.Drawing.Size(100, 22);
+            this.TotalPriceTxt.TabIndex = 9;
+            this.TotalPriceTxt.Text = "Total Price: ";
+            // 
+            // LblTotalPrice
+            // 
+            this.LblTotalPrice.AutoSize = true;
+            this.LblTotalPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblTotalPrice.Location = new System.Drawing.Point(106, 533);
+            this.LblTotalPrice.Name = "LblTotalPrice";
+            this.LblTotalPrice.Size = new System.Drawing.Size(19, 21);
+            this.LblTotalPrice.TabIndex = 10;
+            this.LblTotalPrice.Text = "0";
+            this.LblTotalPrice.Click += new System.EventHandler(this.LblTotalPrice_Click);
+            // 
+            // ChkBoxIs4x4
+            // 
+            this.ChkBoxIs4x4.AutoSize = true;
+            this.ChkBoxIs4x4.Location = new System.Drawing.Point(12, 268);
+            this.ChkBoxIs4x4.Name = "ChkBoxIs4x4";
+            this.ChkBoxIs4x4.Size = new System.Drawing.Size(85, 19);
+            this.ChkBoxIs4x4.TabIndex = 11;
+            this.ChkBoxIs4x4.Text = "4x4 Version";
+            this.ChkBoxIs4x4.UseVisualStyleBackColor = true;
+            this.ChkBoxIs4x4.CheckedChanged += new System.EventHandler(this.ChkBoxIs4x4_CheckedChanged);
+            // 
+            // ChkBoxIsMetallicColor
+            // 
+            this.ChkBoxIsMetallicColor.AutoSize = true;
+            this.ChkBoxIsMetallicColor.Location = new System.Drawing.Point(12, 293);
+            this.ChkBoxIsMetallicColor.Name = "ChkBoxIsMetallicColor";
+            this.ChkBoxIsMetallicColor.Size = new System.Drawing.Size(100, 19);
+            this.ChkBoxIsMetallicColor.TabIndex = 14;
+            this.ChkBoxIsMetallicColor.Text = "Metallic Color";
+            this.ChkBoxIsMetallicColor.UseVisualStyleBackColor = true;
+            this.ChkBoxIsMetallicColor.CheckedChanged += new System.EventHandler(this.ChkBoxIsMetallicColor_CheckedChanged);
+            // 
+            // ChkBoxIsMultimedia
+            // 
+            this.ChkBoxIsMultimedia.AutoSize = true;
+            this.ChkBoxIsMultimedia.Location = new System.Drawing.Point(12, 318);
+            this.ChkBoxIsMultimedia.Name = "ChkBoxIsMultimedia";
+            this.ChkBoxIsMultimedia.Size = new System.Drawing.Size(125, 19);
+            this.ChkBoxIsMultimedia.TabIndex = 15;
+            this.ChkBoxIsMultimedia.Text = "Multimedia Screen";
+            this.ChkBoxIsMultimedia.UseVisualStyleBackColor = true;
             // 
             // OrderJeep
             // 
@@ -169,10 +190,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
-            this.Controls.Add(this.BtnIsMultimedia);
+            this.Controls.Add(this.ChkBoxIsMultimedia);
+            this.Controls.Add(this.ChkBoxIsMetallicColor);
+            this.Controls.Add(this.ChkBoxIs4x4);
+            this.Controls.Add(this.LblTotalPrice);
+            this.Controls.Add(this.TotalPriceTxt);
             this.Controls.Add(this.ChkBoxDoorNumber);
-            this.Controls.Add(this.BtnMetallicColor);
-            this.Controls.Add(this.Btn4x4);
             this.Controls.Add(this.BtnSubmitJeep);
             this.Controls.Add(this.ChkBoxColor);
             this.Controls.Add(this.ChkBoxYear);
@@ -193,9 +216,11 @@
         private CheckedListBox ChkBoxYear;
         private CheckedListBox ChkBoxColor;
         private Button BtnSubmitJeep;
-        private RadioButton Btn4x4;
-        private RadioButton BtnMetallicColor;
         private CheckedListBox ChkBoxDoorNumber;
-        private RadioButton BtnIsMultimedia;
+        private TextBox TotalPriceTxt;
+        private Label LblTotalPrice;
+        private CheckBox ChkBoxIs4x4;
+        private CheckBox ChkBoxIsMetallicColor;
+        private CheckBox ChkBoxIsMultimedia;
     }
 }

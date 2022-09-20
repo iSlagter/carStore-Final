@@ -48,21 +48,21 @@ namespace carStore_Final
                     Name = "VehicleMake" + i
                 });
 
-                VehiclesMakes.Add(new Label
+                VehiclesModels.Add(new Label
                 {
                     Text = this.Vehicles[i].Model,
                     Location = new Point(left, top),
                     Name = "VehicleModel" + i
                 });
 
-                VehiclesMakes.Add(new Label
+                VehiclesYears.Add(new Label
                 {
                     Text = this.Vehicles[i].Year.ToString(),
                     Location = new Point(left, top),
                     Name = "VehicleYear" + i
                 });
 
-                VehiclesMakes.Add(new Label
+                VehiclesColors.Add(new Label
                 {
                     Text = this.Vehicles[i].Color,
                     Location = new Point(left, top),
