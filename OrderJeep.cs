@@ -502,6 +502,12 @@ namespace carStore_Final
                         break;
                 }
             }
+            if (this.ChkBoxIsMultimedia.Checked)
+                price += 5000;
+            if (this.ChkBoxIs4x4.Checked)
+                price += 20000;
+            if (this.ChkBoxIsMetallicColor.Checked)
+                price += 5000;
 
             this.LblTotalPrice.Text = price.ToString();
         }
@@ -548,11 +554,13 @@ namespace carStore_Final
 
         private void Btn4x4_CheckedChanged(object sender, EventArgs e)
         {
+            CalculatePrice();
 
         }
 
         private void BtnMetallicColor_CheckedChanged(object sender, EventArgs e)
         {
+            CalculatePrice();
 
         }
 
@@ -586,22 +594,23 @@ namespace carStore_Final
 
         private void ChkBoxIs4x4_CheckedChanged(object sender, EventArgs e)
         {
-
+            CalculatePrice();
         }
 
         private void IsMetallicColor_CheckedChanged(object sender, EventArgs e)
         {
-
+            CalculatePrice();
         }
 
         private void IsMultimedia_CheckedChanged(object sender, EventArgs e)
         {
+            CalculatePrice();
 
         }
 
         private void ChkBoxIsMetallicColor_CheckedChanged(object sender, EventArgs e)
         {
-
+            CalculatePrice();
         }
     }
 }

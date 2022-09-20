@@ -67,7 +67,9 @@
             this.ChkBoxMakeAndModel.Name = "ChkBoxMakeAndModel";
             this.ChkBoxMakeAndModel.Size = new System.Drawing.Size(198, 130);
             this.ChkBoxMakeAndModel.TabIndex = 1;
+            this.ChkBoxMakeAndModel.SelectedIndexChanged += new System.EventHandler(this.OnContentChanged);
             this.ChkBoxMakeAndModel.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+
             // 
             // ChkBoxYear
             // 
@@ -85,7 +87,9 @@
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(120, 148);
             this.ChkBoxYear.TabIndex = 2;
+            this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.OnContentChanged);
             this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.ChkBoxYear_SelectedIndexChanged);
+
             // 
             // ChkBoxColor
             // 
@@ -106,7 +110,9 @@
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
+            this.ChkBoxColor.SelectedIndexChanged += new System.EventHandler(this.OnContentChanged);
             this.ChkBoxColor.SelectedIndexChanged += new System.EventHandler(this.ChkBoxColor_SelectedIndexChanged);
+
             // 
             // BtnSubmitJeep
             // 
@@ -128,6 +134,7 @@
             this.ChkBoxDoorNumber.Name = "ChkBoxDoorNumber";
             this.ChkBoxDoorNumber.Size = new System.Drawing.Size(120, 40);
             this.ChkBoxDoorNumber.TabIndex = 7;
+            this.ChkBoxDoorNumber.SelectedIndexChanged += new System.EventHandler(this.OnContentChanged);
             this.ChkBoxDoorNumber.SelectedIndexChanged += new System.EventHandler(this.ChkBoxDoorNumber_SelectedIndexChanged);
             // 
             // TotalPriceTxt
@@ -161,7 +168,8 @@
             this.ChkBoxIs4x4.TabIndex = 11;
             this.ChkBoxIs4x4.Text = "4x4 Version";
             this.ChkBoxIs4x4.UseVisualStyleBackColor = true;
-            this.ChkBoxIs4x4.CheckedChanged += new System.EventHandler(this.ChkBoxIs4x4_CheckedChanged);
+            this.ChkBoxIs4x4.CheckedChanged += new System.EventHandler(this.OnContentChanged);
+
             // 
             // ChkBoxIsMetallicColor
             // 
@@ -172,7 +180,7 @@
             this.ChkBoxIsMetallicColor.TabIndex = 14;
             this.ChkBoxIsMetallicColor.Text = "Metallic Color";
             this.ChkBoxIsMetallicColor.UseVisualStyleBackColor = true;
-            this.ChkBoxIsMetallicColor.CheckedChanged += new System.EventHandler(this.ChkBoxIsMetallicColor_CheckedChanged);
+            this.ChkBoxIsMetallicColor.CheckedChanged += new System.EventHandler(this.OnContentChanged);
             // 
             // ChkBoxIsMultimedia
             // 

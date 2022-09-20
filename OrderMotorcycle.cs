@@ -19,6 +19,18 @@ namespace carStore_Final
             InitializeComponent();
         }
 
+        //Check true if all the input is fill
+        private bool IsEverythingFilled()
+        {
+            int IsFilled = 0;
+            IsFilled += this.ChkBoxMakeAndModel.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxYear.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxColor.SelectedItem == null ? 1 : 0;
+
+            return IsFilled == 0;
+
+        }
+
         private void BtnSubmitMotorcycle_Click(object sender, EventArgs e)
         {
             this.Close();
