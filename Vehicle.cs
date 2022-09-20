@@ -22,9 +22,9 @@ using System.Threading.Tasks;
  ||
  |+-----------------------------------------------------------------------
  ||
- ||   Constructors:  Vehicle(double Price, string Make, string Year, string Description, string Model)
+ ||   Constructors:  Vehicle(double Price, string Make, int Year, string Description, string Model)
  ||
- ||  Class Methods:  string Make(), string Model(), string Year(), double Price(), string Color(), string Description(), int ProductId()
+ ||  Class Methods:  string Make(), string Model(), int Year(), double Price(), string Color(), string Description(), int ProductId()
  ||
  ||  Inst. Methods:  *static int count(), string ToString(), double CalculatePrice()
  ||
@@ -39,14 +39,14 @@ namespace carStore_Final
         // Getters && Setters
         public string Make { get; set; }
         public string Model { get; set; }
-        public string Year { get; set; }
+        public int Year { get; set; }
         public string Color { get; set; }
         public double Price { get; set; }
         public string Description { get; set; }
         public int ProductId { get; }
 
         // Constructor : Parameterized
-        public Vehicle(string Make, string Model, string Year, string Color, double Price, string Description)
+        public Vehicle(string Make, string Model, int Year, string Color, double Price, string Description)
         {
             this.Make = Make;
             this.Model = Model;

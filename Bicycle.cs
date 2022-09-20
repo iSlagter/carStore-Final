@@ -14,7 +14,7 @@ namespace carStore_Final
         public bool IsDiscBreak { get; set; }
         public int NumberGears  { get; set; }
 
-        public Bicycle(string Kind,bool IsDiscBreak, int NumberGears, bool IsEngine, string Make, string Model, string Year, string Color, double Price, string Description) : base(IsEngine, Make, Model, Year, Color, Price, Description)
+        public Bicycle(string Kind,bool IsDiscBreak, int NumberGears, bool IsEngine, string Make, string Model, int Year, string Color, double Price, string Description) : base(IsEngine, Make, Model, Year, Color, Price, Description)
         {
             this.Kind = Kind;
             this.IsDiscBreak = IsDiscBreak;

@@ -11,7 +11,7 @@ namespace carStore_Final
         //Getters && Setters
         public bool Is4X4 { get; set; }
 
-        public JeepCar(bool Is4X4, int DoorNumber, bool IsAC, bool IsMultimedia, string Make, string Model, string Year, string Color, double Price, string Description) : base(DoorNumber, IsAC, IsMultimedia, Make,  Model, Year, Color, Price, Description)
+        public JeepCar(bool Is4X4, int DoorNumber, bool IsAC, bool IsMultimedia, bool IsMetallicColor, string Make, string Model, int Year, string Color, double Price, string Description) : base(DoorNumber, IsAC, IsMultimedia, IsMetallicColor, Make, Model, Year, Color, Price, Description)
         {
             this.Is4X4 = Is4X4;
         }
@@ -26,6 +26,12 @@ namespace carStore_Final
             double price = base.CalculatePrice();
             if (Is4X4)
                 price += 20000;
+            if (IsMetallicColor)
+                price += 5000;
+            if (IsMultimedia)
+                price += 5000;
+            if (!IsAC)
+                price -= 5000;
             return price;
         }
     }

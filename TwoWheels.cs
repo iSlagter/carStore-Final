@@ -12,7 +12,7 @@ namespace carStore_Final
         //Getters && Setters
         public bool IsEngine { get; set; }
                 
-        public TwoWheels(bool IsEngine, string Make, string Model, string Year, string Color, double Price, string Description) : base(Make, Model, Year, Color, Price, Description)
+        public TwoWheels(bool IsEngine, string Make, string Model, int Year, string Color, double Price, string Description) : base(Make, Model, Year, Color, Price, Description)
         {
             this.IsEngine = IsEngine;
         }
