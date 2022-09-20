@@ -151,7 +151,7 @@ namespace carStore_Final
                 var Result = form.ShowDialog();
                 if (Result == DialogResult.OK)
                 {
-                    //Add the new order of cocktail to the products
+                    //Add the new order of Jeep Car to the Vehicle
                     this.Vehicles.Add(form.JeepCar);
                     RenderComponents();
                 }
@@ -179,7 +179,7 @@ namespace carStore_Final
                     if (!File.Exists(FilePath))
                     {
                         //Create a file
-                        using (var h = File.Create(FilePath)) ;
+                        using (var h = File.Create(FilePath));
                     }
                     JsonSerializerSettings settings = new JsonSerializerSettings
                     {
@@ -212,7 +212,7 @@ namespace carStore_Final
                 var Result = form.ShowDialog();
                 if (Result == DialogResult.OK)
                 {
-                    //Add the new order of cocktail to the products
+                    //Add the new order of Private Car to the Vehicle
                     this.Vehicles.Add(form.PrivateCar);
                     RenderComponents();
                 }
@@ -226,7 +226,7 @@ namespace carStore_Final
                 var Result = form.ShowDialog();
                 if (Result == DialogResult.OK)
                 {
-                    //Add the new order of cocktail to the products
+                    //Add the new order of Motorcycle to the Vehicle
                     this.Vehicles.Add(form.Motorcycle);
                     RenderComponents();
                 }
@@ -240,7 +240,7 @@ namespace carStore_Final
                 var Result = form.ShowDialog();
                 if (Result == DialogResult.OK)
                 {
-                    //Add the new order of cocktail to the products
+                    //Add the new order of Bicycle to the Vehicles
                     this.Vehicles.Add(form.Bicycle);
                     RenderComponents();
                 }

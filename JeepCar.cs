@@ -23,6 +23,7 @@ namespace carStore_Final
         //Return the price of the JEEP it add 20000 if Is4X4 to the price
         public override double CalculatePrice()
         {
+
             double price = base.CalculatePrice();
             if (Is4X4)
                 price += 20000;
