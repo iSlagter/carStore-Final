@@ -30,9 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.BtnSubmitBicycle = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.ChkBoxMakeAndModel = new System.Windows.Forms.CheckedListBox();
+            this.ChkBoxColor = new System.Windows.Forms.CheckedListBox();
+            this.ChkBoxYear = new System.Windows.Forms.CheckedListBox();
+            this.ChkBoxIsDiscBreak = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LblTotalPrice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -55,26 +58,45 @@
             this.BtnSubmitBicycle.UseVisualStyleBackColor = true;
             this.BtnSubmitBicycle.Click += new System.EventHandler(this.BtnSubmitBicycle_Click);
             // 
-            // checkedListBox1
+            // ChkBoxMakeAndModel
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(51, 178);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox1.TabIndex = 2;
+            this.ChkBoxMakeAndModel.FormattingEnabled = true;
+            this.ChkBoxMakeAndModel.Items.AddRange(new object[] {
+            "Trek, Marlin",
+            "Cannondale, SuperSix",
+            "Mongoose, Salvo",
+            "Mongoose, BMX",
+            "Specialized, Levo"});
+            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(46, 92);
+            this.ChkBoxMakeAndModel.Name = "ChkBoxMakeAndModel";
+            this.ChkBoxMakeAndModel.Size = new System.Drawing.Size(147, 94);
+            this.ChkBoxMakeAndModel.TabIndex = 2;
+            this.ChkBoxMakeAndModel.SelectedIndexChanged += new System.EventHandler(this.ChkBoxMakeAndModel_SelectedIndexChanged);
             // 
-            // checkedListBox2
+            // ChkBoxColor
             // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(226, 178);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox2.TabIndex = 3;
+            this.ChkBoxColor.FormattingEnabled = true;
+            this.ChkBoxColor.Items.AddRange(new object[] {
+            "Black",
+            "White",
+            "Blue",
+            "Red",
+            "Green",
+            "Brown",
+            "Yellow",
+            "Pink",
+            "Orange",
+            "Gray",
+            "Silver"});
+            this.ChkBoxColor.Location = new System.Drawing.Point(212, 92);
+            this.ChkBoxColor.Name = "ChkBoxColor";
+            this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
+            this.ChkBoxColor.TabIndex = 3;
             // 
-            // checkedListBox3
+            // ChkBoxYear
             // 
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
+            this.ChkBoxYear.FormattingEnabled = true;
+            this.ChkBoxYear.Items.AddRange(new object[] {
             "2015",
             "2016",
             "2017",
@@ -83,10 +105,41 @@
             "2020",
             "2021",
             "2022"});
-            this.checkedListBox3.Location = new System.Drawing.Point(401, 178);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(120, 148);
-            this.checkedListBox3.TabIndex = 4;
+            this.ChkBoxYear.Location = new System.Drawing.Point(379, 92);
+            this.ChkBoxYear.Name = "ChkBoxYear";
+            this.ChkBoxYear.Size = new System.Drawing.Size(120, 148);
+            this.ChkBoxYear.TabIndex = 4;
+            // 
+            // ChkBoxIsDiscBreak
+            // 
+            this.ChkBoxIsDiscBreak.AutoSize = true;
+            this.ChkBoxIsDiscBreak.Location = new System.Drawing.Point(58, 338);
+            this.ChkBoxIsDiscBreak.Name = "ChkBoxIsDiscBreak";
+            this.ChkBoxIsDiscBreak.Size = new System.Drawing.Size(80, 19);
+            this.ChkBoxIsDiscBreak.TabIndex = 5;
+            this.ChkBoxIsDiscBreak.Text = "Disc Break";
+            this.ChkBoxIsDiscBreak.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(58, 534);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "Total Price: ";
+            // 
+            // LblTotalPrice
+            // 
+            this.LblTotalPrice.AutoSize = true;
+            this.LblTotalPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblTotalPrice.Location = new System.Drawing.Point(147, 535);
+            this.LblTotalPrice.Name = "LblTotalPrice";
+            this.LblTotalPrice.Size = new System.Drawing.Size(19, 21);
+            this.LblTotalPrice.TabIndex = 7;
+            this.LblTotalPrice.Text = "0";
             // 
             // OrderBicycle
             // 
@@ -94,9 +147,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
-            this.Controls.Add(this.checkedListBox3);
-            this.Controls.Add(this.checkedListBox2);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.LblTotalPrice);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ChkBoxIsDiscBreak);
+            this.Controls.Add(this.ChkBoxYear);
+            this.Controls.Add(this.ChkBoxColor);
+            this.Controls.Add(this.ChkBoxMakeAndModel);
             this.Controls.Add(this.BtnSubmitBicycle);
             this.Controls.Add(this.label1);
             this.Name = "OrderBicycle";
@@ -110,8 +166,11 @@
 
         private Label label1;
         private Button BtnSubmitBicycle;
-        private CheckedListBox checkedListBox1;
-        private CheckedListBox checkedListBox2;
-        private CheckedListBox checkedListBox3;
+        private CheckedListBox ChkBoxMakeAndModel;
+        private CheckedListBox ChkBoxColor;
+        private CheckedListBox ChkBoxYear;
+        private CheckBox ChkBoxIsDiscBreak;
+        private TextBox textBox1;
+        private Label LblTotalPrice;
     }
 }

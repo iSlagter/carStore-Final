@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace carStore_Final
 {
-    public partial class OrderMotorcycle : Form
+    internal partial class OrderMotorcycle : Form
     {
+        public Vehicle Motorcycle = null;
+
         public OrderMotorcycle()
         {
             InitializeComponent();
@@ -20,6 +22,11 @@ namespace carStore_Final
         private void BtnSubmitMotorcycle_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ChkBoxMakeAndModel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

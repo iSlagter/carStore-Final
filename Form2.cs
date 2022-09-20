@@ -145,12 +145,7 @@ namespace carStore_Final
         }
 
         private void BtnOrderJeep_Click(object sender, EventArgs e)
-        {
-            /*
-            OrderJeep orderJeep = new OrderJeep();
-            orderJeep.ShowDialog();
-            */
-            
+        { 
             using (var form = new OrderJeep())
             {
                 var Result = form.ShowDialog();
@@ -161,8 +156,6 @@ namespace carStore_Final
                     RenderComponents();
                 }
             }
-            
-
         }
 
         private void BtnSaveOrder_Click(object sender, EventArgs e)
@@ -186,7 +179,7 @@ namespace carStore_Final
                     if (!File.Exists(FilePath))
                     {
                         //Create a file
-                        //using (var h = File.Create(FilePath)) ;
+                        using (var h = File.Create(FilePath)) ;
                     }
                     JsonSerializerSettings settings = new JsonSerializerSettings
                     {
@@ -206,7 +199,7 @@ namespace carStore_Final
                             control.Dispose();
                     }
                     this.Vehicles.Clear();
-                    //RenderComponents();
+                    RenderComponents();
                 }
 
             }
@@ -214,26 +207,77 @@ namespace carStore_Final
 
         private void BtnOrderPrivateCar_Click(object sender, EventArgs e)
         {
-            OrderPrivateCar orderPrivateCar = new OrderPrivateCar();
-            orderPrivateCar.ShowDialog();
+            using (var form = new OrderPrivateCar())
+            {
+                var Result = form.ShowDialog();
+                if (Result == DialogResult.OK)
+                {
+                    //Add the new order of cocktail to the products
+                    this.Vehicles.Add(form.PrivateCar);
+                    RenderComponents();
+                }
+            }
         }
 
         private void BtnOrderMotorcycle_Click(object sender, EventArgs e)
         {
-            OrderMotorcycle orderMotorcycle = new OrderMotorcycle();
-            orderMotorcycle.ShowDialog();
+            using (var form = new OrderMotorcycle())
+            {
+                var Result = form.ShowDialog();
+                if (Result == DialogResult.OK)
+                {
+                    //Add the new order of cocktail to the products
+                    this.Vehicles.Add(form.Motorcycle);
+                    RenderComponents();
+                }
+            }
         }
 
         private void BtnOrderBicycle_Click(object sender, EventArgs e)
         {
-            OrderBicycle orderBicycle = new OrderBicycle();
-
-            orderBicycle.ShowDialog();
+            using (var form = new OrderBicycle())
+            {
+                var Result = form.ShowDialog();
+                if (Result == DialogResult.OK)
+                {
+                    //Add the new order of cocktail to the products
+                    this.Vehicles.Add(form.Bicycle);
+                    RenderComponents();
+                }
+            }
         }
 
         private void BtnLoadOrder_Click(object sender, EventArgs e)
         {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+            //Open a window to take the json file
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "Json files (*.json)|*.json";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+                //Check that all the data is ok
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
 
+                    //Read the contents of the file into a stream
+                    var fileStream = openFileDialog.OpenFile();
+
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        fileContent = reader.ReadToEnd();
+                    }
+
+                }
+            }
+            JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
+            //Make a deserialization by json convert to a product resource
+            this.Vehicles = JsonConvert.DeserializeObject<List<Vehicle>>(fileContent, settings);
+            RenderComponents();
         }
 
         private void LblTotalPrice_Click(object sender, EventArgs e)

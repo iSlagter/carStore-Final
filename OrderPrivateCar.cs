@@ -10,16 +10,34 @@ using System.Windows.Forms;
 
 namespace carStore_Final
 {
-    public partial class OrderPrivateCar : Form
+    internal partial class OrderPrivateCar : Form
     {
+        public Vehicle PrivateCar = null;
         public OrderPrivateCar()
         {
             InitializeComponent();
         }
 
+        //Check true if all the input is fill
+        private bool IsEverythingFilled()
+        {
+            int IsFilled = 0;
+            IsFilled += this.ChkBoxMakeAndModel.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxYear.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxColor.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxDoorNumber.SelectedItem == null ? 1 : 0;
+
+            return IsFilled == 0;
+        }
+
         private void BtnSubmitPrivateCar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ChkBoxMakeAndModel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             
         }
     }
 }

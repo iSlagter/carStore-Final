@@ -30,9 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.BtnSubmitPrivateCar = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.ChkBoxMakeAndModel = new System.Windows.Forms.CheckedListBox();
+            this.ChkBoxColor = new System.Windows.Forms.CheckedListBox();
+            this.ChkBoxYear = new System.Windows.Forms.CheckedListBox();
+            this.ChkBoxDoorNumber = new System.Windows.Forms.CheckedListBox();
+            this.ChkBoxIsHybrid = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LblTotalPrice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -55,32 +59,45 @@
             this.BtnSubmitPrivateCar.UseVisualStyleBackColor = true;
             this.BtnSubmitPrivateCar.Click += new System.EventHandler(this.BtnSubmitPrivateCar_Click);
             // 
-            // checkedListBox1
+            // ChkBoxMakeAndModel
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Toyota",
-            "Kia",
-            "Hyundai",
-            "Tesla",
-            "BMW"});
-            this.checkedListBox1.Location = new System.Drawing.Point(61, 155);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox1.TabIndex = 2;
+            this.ChkBoxMakeAndModel.FormattingEnabled = true;
+            this.ChkBoxMakeAndModel.Items.AddRange(new object[] {
+            "Toyota, Corolla",
+            "Kia, Picanto",
+            "Hyundai, Ionic",
+            "Tesla, Model 3",
+            "BMW, M2"});
+            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(16, 93);
+            this.ChkBoxMakeAndModel.Name = "ChkBoxMakeAndModel";
+            this.ChkBoxMakeAndModel.Size = new System.Drawing.Size(120, 94);
+            this.ChkBoxMakeAndModel.TabIndex = 2;
+            this.ChkBoxMakeAndModel.SelectedIndexChanged += new System.EventHandler(this.ChkBoxMakeAndModel_SelectedIndexChanged);
             // 
-            // checkedListBox2
+            // ChkBoxColor
             // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(248, 155);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox2.TabIndex = 3;
+            this.ChkBoxColor.FormattingEnabled = true;
+            this.ChkBoxColor.Items.AddRange(new object[] {
+            "Black",
+            "White",
+            "Blue",
+            "Red",
+            "Green",
+            "Brown",
+            "Yellow",
+            "Pink",
+            "Orange",
+            "Gray",
+            "Silver"});
+            this.ChkBoxColor.Location = new System.Drawing.Point(469, 93);
+            this.ChkBoxColor.Name = "ChkBoxColor";
+            this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
+            this.ChkBoxColor.TabIndex = 3;
             // 
-            // checkedListBox3
+            // ChkBoxYear
             // 
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
+            this.ChkBoxYear.FormattingEnabled = true;
+            this.ChkBoxYear.Items.AddRange(new object[] {
             "2015",
             "2016",
             "2017",
@@ -89,10 +106,52 @@
             "2020",
             "2021",
             "2022"});
-            this.checkedListBox3.Location = new System.Drawing.Point(440, 155);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(120, 148);
-            this.checkedListBox3.TabIndex = 4;
+            this.ChkBoxYear.Location = new System.Drawing.Point(182, 93);
+            this.ChkBoxYear.Name = "ChkBoxYear";
+            this.ChkBoxYear.Size = new System.Drawing.Size(90, 148);
+            this.ChkBoxYear.TabIndex = 4;
+            // 
+            // ChkBoxDoorNumber
+            // 
+            this.ChkBoxDoorNumber.FormattingEnabled = true;
+            this.ChkBoxDoorNumber.Items.AddRange(new object[] {
+            "3 Doors (Short)",
+            "5 Doors (Long)"});
+            this.ChkBoxDoorNumber.Location = new System.Drawing.Point(302, 93);
+            this.ChkBoxDoorNumber.Name = "ChkBoxDoorNumber";
+            this.ChkBoxDoorNumber.Size = new System.Drawing.Size(120, 40);
+            this.ChkBoxDoorNumber.TabIndex = 5;
+            // 
+            // ChkBoxIsHybrid
+            // 
+            this.ChkBoxIsHybrid.AutoSize = true;
+            this.ChkBoxIsHybrid.Location = new System.Drawing.Point(36, 387);
+            this.ChkBoxIsHybrid.Name = "ChkBoxIsHybrid";
+            this.ChkBoxIsHybrid.Size = new System.Drawing.Size(103, 19);
+            this.ChkBoxIsHybrid.TabIndex = 6;
+            this.ChkBoxIsHybrid.Text = "Hybrid Version";
+            this.ChkBoxIsHybrid.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(36, 501);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "Total Price: ";
+            // 
+            // LblTotalPrice
+            // 
+            this.LblTotalPrice.AutoSize = true;
+            this.LblTotalPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblTotalPrice.Location = new System.Drawing.Point(132, 501);
+            this.LblTotalPrice.Name = "LblTotalPrice";
+            this.LblTotalPrice.Size = new System.Drawing.Size(19, 21);
+            this.LblTotalPrice.TabIndex = 8;
+            this.LblTotalPrice.Text = "0";
             // 
             // OrderPrivateCar
             // 
@@ -100,9 +159,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
-            this.Controls.Add(this.checkedListBox3);
-            this.Controls.Add(this.checkedListBox2);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.LblTotalPrice);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ChkBoxIsHybrid);
+            this.Controls.Add(this.ChkBoxDoorNumber);
+            this.Controls.Add(this.ChkBoxYear);
+            this.Controls.Add(this.ChkBoxColor);
+            this.Controls.Add(this.ChkBoxMakeAndModel);
             this.Controls.Add(this.BtnSubmitPrivateCar);
             this.Controls.Add(this.label1);
             this.Name = "OrderPrivateCar";
@@ -116,8 +179,12 @@
 
         private Label label1;
         private Button BtnSubmitPrivateCar;
-        private CheckedListBox checkedListBox1;
-        private CheckedListBox checkedListBox2;
-        private CheckedListBox checkedListBox3;
+        private CheckedListBox ChkBoxMakeAndModel;
+        private CheckedListBox ChkBoxColor;
+        private CheckedListBox ChkBoxYear;
+        private CheckedListBox ChkBoxDoorNumber;
+        private CheckBox ChkBoxIsHybrid;
+        private TextBox textBox1;
+        private Label LblTotalPrice;
     }
 }
