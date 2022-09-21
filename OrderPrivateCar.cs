@@ -237,12 +237,243 @@ namespace carStore_Final
 
         //Fucntion to calculate the price of all the things that add to the product
         private void CalculatePrice()
-        { 
+        {
+            //this.Warning.Text = "";
+            int price = 0;
+            if (ChkBoxMakeAndModel.SelectedItem != null)
+            {
+                string Jeep = this.ChkBoxMakeAndModel.SelectedItem.ToString();
+                string year = this.ChkBoxYear.SelectedItem.ToString();
+
+
+                //Add the price by the Make, Model and Year of the Jeep
+                switch (Jeep)
+                {
+                    case "Toyota, Corolla":
+                        switch (year)
+                        {
+                            case "2015":
+                                price += 99000;
+                                break;
+                            case "2016":
+                                price += 102000;
+                                break;
+                            case "2017":
+                                price += 105000;
+                                break;
+                            case "2018":
+                                price += 120000;
+                                break;
+                            case "2019":
+                                price += 160000;
+                                break;
+                            case "2020":
+                                price += 175000;
+                                break;
+                            case "2021":
+                                price += 185000;
+                                break;
+                            case "2022":
+                                price += 250000;
+                                break;
+                        }
+                        break;
+                    case "Kia, Picanto":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    case "Hyundai, Ionic":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    case "Tesla, Model 3":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    case "BMW, M2":
+                        switch (year)
+                        {
+                            case "2015":
+                                price = 99000;
+                                break;
+                            case "2016":
+                                price = 102000;
+                                break;
+                            case "2017":
+                                price = 105000;
+                                break;
+                            case "2018":
+                                price = 120000;
+                                break;
+                            case "2019":
+                                price = 160000;
+                                break;
+                            case "2020":
+                                price = 175000;
+                                break;
+                            case "2021":
+                                price = 185000;
+                                break;
+                            case "2022":
+                                price = 250000;
+                                break;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (this.ChkBoxIsMultimedia.Checked)
+                price += 5000;
+            if (this.ChkBoxIsHybrid.Checked)
+                price += 8000;
+            if (this.ChkBoxIsMetallicColor.Checked)
+                price += 5000;
+
+            this.LblTotalPrice.Text = price.ToString();
 
         }
         private void ChkBoxMakeAndModel_SelectedIndexChanged(object sender, EventArgs e)
         {
-             
+            int index = ChkBoxMakeAndModel.SelectedIndex;
+            int count = ChkBoxMakeAndModel.Items.Count;
+            for (int x = 0; x < count; x++)
+            {
+                if (index != x)
+                {
+                    ChkBoxMakeAndModel.SetItemCheckState(x, CheckState.Unchecked);
+                }
+            }
+
+        }
+
+        private void ChkBoxYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = ChkBoxYear.SelectedIndex;
+            int count = ChkBoxYear.Items.Count;
+            for (int x = 0; x < count; x++)
+            {
+                if (index != x)
+                {
+                    ChkBoxYear.SetItemCheckState(x, CheckState.Unchecked);
+                }
+            }
+        }
+
+        private void ChkBoxDoorNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = ChkBoxDoorNumber.SelectedIndex;
+            int count = ChkBoxDoorNumber.Items.Count;
+            for (int x = 0; x < count; x++)
+            {
+                if (index != x)
+                {
+                    ChkBoxDoorNumber.SetItemCheckState(x, CheckState.Unchecked);
+                }
+            }
+        }
+
+        private void ChkBoxColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = ChkBoxColor.SelectedIndex;
+            int count = ChkBoxColor.Items.Count;
+            for (int x = 0; x < count; x++)
+            {
+                if (index != x)
+                {
+                    ChkBoxColor.SetItemCheckState(x, CheckState.Unchecked);
+                }
+            }
+        }
+
+        private void ChkBoxIsHybrid_CheckedChanged(object sender, EventArgs e)
+        {
+            CalculatePrice();
+        }
+
+        private void ChkBoxIsMultimedia_CheckedChanged(object sender, EventArgs e)
+        {
+            CalculatePrice();
+        }
+
+        private void ChkBoxIsMetallicColor_CheckedChanged(object sender, EventArgs e)
+        {
+            CalculatePrice();
         }
     }
 }

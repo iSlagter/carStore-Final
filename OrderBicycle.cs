@@ -215,7 +215,7 @@ namespace carStore_Final
         {
             //this.Warning.Text = "";
             int price = 0;
-            if (ChkBoxMakeAndModel.SelectedItem != null)
+            if (ChkBoxMakeAndModel.SelectedItem != null & ChkBoxYear.SelectedItem != null)
             {
                 string bicycle = this.ChkBoxMakeAndModel.SelectedItem.ToString();
                 int year = int.Parse(this.ChkBoxYear.SelectedItem.ToString());
@@ -372,6 +372,7 @@ namespace carStore_Final
                     default:
                         break;
                 }
+                CalculatePrice();
             }
             if (this.ChkBoxIsDiscBreak.Checked)
                 price += 1000;
@@ -381,6 +382,48 @@ namespace carStore_Final
 
         private void ChkBoxMakeAndModel_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int index = ChkBoxMakeAndModel.SelectedIndex;
+            int count = ChkBoxMakeAndModel.Items.Count;
+            for (int x = 0; x < count; x++)
+            {
+                if (index != x)
+                {
+                    ChkBoxMakeAndModel.SetItemCheckState(x, CheckState.Unchecked);
+                }
+            }
+            CalculatePrice();
+        }
 
+        private void ChkBoxColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = ChkBoxColor.SelectedIndex;
+            int count = ChkBoxColor.Items.Count;
+            for (int x = 0; x < count; x++)
+            {
+                if (index != x)
+                {
+                    ChkBoxColor.SetItemCheckState(x, CheckState.Unchecked);
+                }
+            }
+            CalculatePrice();
+        }
+
+        private void ChkBoxYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = ChkBoxYear.SelectedIndex;
+            int count = ChkBoxYear.Items.Count;
+            for (int x = 0; x < count; x++)
+            {
+                if (index != x)
+                {
+                    ChkBoxYear.SetItemCheckState(x, CheckState.Unchecked);
+                }
+            }
+            CalculatePrice();
+        }
+
+        private void ChkBoxIsDiscBreak_CheckedChanged(object sender, EventArgs e)
+        {
+            CalculatePrice();
         }
     } }

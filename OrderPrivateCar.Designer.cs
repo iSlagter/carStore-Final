@@ -37,6 +37,8 @@
             this.ChkBoxIsHybrid = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblTotalPrice = new System.Windows.Forms.Label();
+            this.ChkBoxIsMultimedia = new System.Windows.Forms.CheckBox();
+            this.ChkBoxIsMetallicColor = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -93,6 +95,7 @@
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
+            this.ChkBoxColor.SelectedIndexChanged += new System.EventHandler(this.ChkBoxColor_SelectedIndexChanged);
             // 
             // ChkBoxYear
             // 
@@ -110,6 +113,7 @@
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(90, 148);
             this.ChkBoxYear.TabIndex = 4;
+            this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.ChkBoxYear_SelectedIndexChanged);
             // 
             // ChkBoxDoorNumber
             // 
@@ -121,6 +125,7 @@
             this.ChkBoxDoorNumber.Name = "ChkBoxDoorNumber";
             this.ChkBoxDoorNumber.Size = new System.Drawing.Size(120, 40);
             this.ChkBoxDoorNumber.TabIndex = 5;
+            this.ChkBoxDoorNumber.SelectedIndexChanged += new System.EventHandler(this.ChkBoxDoorNumber_SelectedIndexChanged);
             // 
             // ChkBoxIsHybrid
             // 
@@ -131,6 +136,7 @@
             this.ChkBoxIsHybrid.TabIndex = 6;
             this.ChkBoxIsHybrid.Text = "Hybrid Version";
             this.ChkBoxIsHybrid.UseVisualStyleBackColor = true;
+            this.ChkBoxIsHybrid.CheckedChanged += new System.EventHandler(this.ChkBoxIsHybrid_CheckedChanged);
             // 
             // textBox1
             // 
@@ -153,12 +159,36 @@
             this.LblTotalPrice.TabIndex = 8;
             this.LblTotalPrice.Text = "0";
             // 
+            // ChkBoxIsMultimedia
+            // 
+            this.ChkBoxIsMultimedia.AutoSize = true;
+            this.ChkBoxIsMultimedia.Location = new System.Drawing.Point(37, 417);
+            this.ChkBoxIsMultimedia.Name = "ChkBoxIsMultimedia";
+            this.ChkBoxIsMultimedia.Size = new System.Drawing.Size(125, 19);
+            this.ChkBoxIsMultimedia.TabIndex = 9;
+            this.ChkBoxIsMultimedia.Text = "Multimedia Screen";
+            this.ChkBoxIsMultimedia.UseVisualStyleBackColor = true;
+            this.ChkBoxIsMultimedia.CheckedChanged += new System.EventHandler(this.ChkBoxIsMultimedia_CheckedChanged);
+            // 
+            // ChkBoxIsMetallicColor
+            // 
+            this.ChkBoxIsMetallicColor.AutoSize = true;
+            this.ChkBoxIsMetallicColor.Location = new System.Drawing.Point(37, 450);
+            this.ChkBoxIsMetallicColor.Name = "ChkBoxIsMetallicColor";
+            this.ChkBoxIsMetallicColor.Size = new System.Drawing.Size(100, 19);
+            this.ChkBoxIsMetallicColor.TabIndex = 10;
+            this.ChkBoxIsMetallicColor.Text = "Metallic Color";
+            this.ChkBoxIsMetallicColor.UseVisualStyleBackColor = true;
+            this.ChkBoxIsMetallicColor.CheckedChanged += new System.EventHandler(this.ChkBoxIsMetallicColor_CheckedChanged);
+            // 
             // OrderPrivateCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
+            this.Controls.Add(this.ChkBoxIsMetallicColor);
+            this.Controls.Add(this.ChkBoxIsMultimedia);
             this.Controls.Add(this.LblTotalPrice);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ChkBoxIsHybrid);
@@ -186,5 +216,7 @@
         private CheckBox ChkBoxIsHybrid;
         private TextBox textBox1;
         private Label LblTotalPrice;
+        private CheckBox ChkBoxIsMultimedia;
+        private CheckBox ChkBoxIsMetallicColor;
     }
 }

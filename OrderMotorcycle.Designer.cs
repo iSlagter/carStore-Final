@@ -35,6 +35,7 @@
             this.ChkBoxYear = new System.Windows.Forms.CheckedListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblTotalPrice = new System.Windows.Forms.Label();
+            this.ChkBoxIsMaunalGear = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -92,6 +93,7 @@
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
+            this.ChkBoxColor.SelectedIndexChanged += new System.EventHandler(this.ChkBoxColor_SelectedIndexChanged);
             // 
             // ChkBoxYear
             // 
@@ -109,6 +111,7 @@
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(120, 148);
             this.ChkBoxYear.TabIndex = 4;
+            this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.ChkBoxYear_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -131,12 +134,24 @@
             this.LblTotalPrice.TabIndex = 6;
             this.LblTotalPrice.Text = "0";
             // 
+            // ChkBoxIsMaunalGear
+            // 
+            this.ChkBoxIsMaunalGear.AutoSize = true;
+            this.ChkBoxIsMaunalGear.Location = new System.Drawing.Point(68, 440);
+            this.ChkBoxIsMaunalGear.Name = "ChkBoxIsMaunalGear";
+            this.ChkBoxIsMaunalGear.Size = new System.Drawing.Size(134, 19);
+            this.ChkBoxIsMaunalGear.TabIndex = 7;
+            this.ChkBoxIsMaunalGear.Text = "Maunal Gear Version";
+            this.ChkBoxIsMaunalGear.UseVisualStyleBackColor = true;
+            this.ChkBoxIsMaunalGear.CheckedChanged += new System.EventHandler(this.ChkBoxIsMaunalGear_CheckedChanged);
+            // 
             // OrderMotorcycle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
+            this.Controls.Add(this.ChkBoxIsMaunalGear);
             this.Controls.Add(this.LblTotalPrice);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ChkBoxYear);
@@ -160,5 +175,6 @@
         private CheckedListBox ChkBoxYear;
         private TextBox textBox1;
         private Label LblTotalPrice;
+        private CheckBox ChkBoxIsMaunalGear;
     }
 }

@@ -92,6 +92,7 @@
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
+            this.ChkBoxColor.SelectedIndexChanged += new System.EventHandler(this.ChkBoxColor_SelectedIndexChanged);
             // 
             // ChkBoxYear
             // 
@@ -109,6 +110,7 @@
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(120, 148);
             this.ChkBoxYear.TabIndex = 4;
+            this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.ChkBoxYear_SelectedIndexChanged);
             // 
             // ChkBoxIsDiscBreak
             // 
@@ -119,6 +121,7 @@
             this.ChkBoxIsDiscBreak.TabIndex = 5;
             this.ChkBoxIsDiscBreak.Text = "Disc Break";
             this.ChkBoxIsDiscBreak.UseVisualStyleBackColor = true;
+            this.ChkBoxIsDiscBreak.CheckedChanged += new System.EventHandler(this.ChkBoxIsDiscBreak_CheckedChanged);
             // 
             // textBox1
             // 
