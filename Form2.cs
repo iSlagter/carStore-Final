@@ -35,8 +35,8 @@ namespace carStore_Final
             VehiclesPrices.Clear();
             VehiclesDeletes.Clear();
 
-            int left = 50;
-            int top = 400;
+            int left = 13;
+            int top = 327;
 
             //Run on all the product that we order add to them a name and price and the function of delete
             for (int i = 0; i < this.Vehicles.Count; i++)
@@ -47,13 +47,14 @@ namespace carStore_Final
                     Location = new Point(left, top),
                     Name = "VehicleMake" + i
                 });
-
+                left = 120;
                 VehiclesModels.Add(new Label
                 {
                     Text = this.Vehicles[i].Model,
                     Location = new Point(left, top),
                     Name = "VehicleModel" + i
                 });
+                left = 240;
 
                 VehiclesYears.Add(new Label
                 {
@@ -61,6 +62,7 @@ namespace carStore_Final
                     Location = new Point(left, top),
                     Name = "VehicleYear" + i
                 });
+                left = 355;
 
                 VehiclesColors.Add(new Label
                 {
@@ -70,7 +72,7 @@ namespace carStore_Final
                 });
 
 
-                left = 330;
+                left = 500;
                 VehiclesPrices.Add(new Label
                 {
                     Text = this.Vehicles[i].CalculatePrice().ToString(),
@@ -78,7 +80,7 @@ namespace carStore_Final
                     Name = "VehiclePrice" + i
                 });
 
-                left = 430;
+                left = 650;
                 VehiclesDeletes.Add(new Button
                 {
                     Text = "Delete",
@@ -88,9 +90,7 @@ namespace carStore_Final
                 });
                 VehiclesDeletes[i].Click += new EventHandler(Delete_Click);
 
-
-                left = 50;
-                top += 30;
+                top += 40;
 
             }
             for (int i = 0; i < this.Vehicles.Count; i++)
@@ -281,6 +281,11 @@ namespace carStore_Final
         }
 
         private void LblTotalPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

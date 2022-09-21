@@ -41,10 +41,14 @@
             this.BtnLoadOrder = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.LblTotalPrice = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -175,34 +179,24 @@
             this.LblTotalPrice.Text = "0";
             this.LblTotalPrice.Click += new System.EventHandler(this.LblTotalPrice_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(5, 270);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(750, 265);
-            this.textBox1.TabIndex = 13;
-            // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox2.Location = new System.Drawing.Point(17, 280);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(74, 26);
             this.textBox2.TabIndex = 14;
-            this.textBox2.Text = "Vehicle";
+            this.textBox2.Text = "Make";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(689, 280);
+            this.textBox3.Location = new System.Drawing.Point(503, 278);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(59, 26);
             this.textBox3.TabIndex = 15;
@@ -211,12 +205,67 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label8.Location = new System.Drawing.Point(11, 309);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(737, 15);
             this.label8.TabIndex = 16;
             this.label8.Text = "---------------------------------------------------------------------------------" +
+    "-----------------------------------------------------------------";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.Location = new System.Drawing.Point(124, 280);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.TabIndex = 17;
+            this.textBox4.Text = "Model";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.Location = new System.Drawing.Point(241, 280);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 26);
+            this.textBox5.TabIndex = 18;
+            this.textBox5.Text = "Year";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6.Location = new System.Drawing.Point(354, 280);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 26);
+            this.textBox6.TabIndex = 19;
+            this.textBox6.Text = "Color";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox7.Location = new System.Drawing.Point(651, 278);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 26);
+            this.textBox7.TabIndex = 20;
+            this.textBox7.Text = "Delete";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label7.Location = new System.Drawing.Point(12, 264);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(737, 15);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "---------------------------------------------------------------------------------" +
     "-----------------------------------------------------------------";
             // 
             // Form2
@@ -225,10 +274,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.LblTotalPrice);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnLoadOrder);
@@ -264,9 +317,13 @@
         private Button BtnLoadOrder;
         private Label label6;
         private Label LblTotalPrice;
-        private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
         private Label label8;
+        private TextBox textBox4;
+        private TextBox textBox5;
+        private TextBox textBox6;
+        private TextBox textBox7;
+        private Label label7;
     }
 }
