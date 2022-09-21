@@ -25,9 +25,9 @@ namespace carStore_Final
         private bool IsEverythingFilled()
         {
             int IsFilled = 0;
-            IsFilled += this.ChkBoxMakeAndModel.SelectedItem == null ? 1 : 0;
-            IsFilled += this.ChkBoxYear.SelectedItem == null ? 1 : 0;
-            IsFilled += this.ChkBoxColor.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxMakeAndModel.SelectedItem.ToString() == null ? 1 : 0;
+            IsFilled += this.ChkBoxYear.SelectedItem.ToString() == null ? 1 : 0;
+            IsFilled += this.ChkBoxColor.SelectedItem.ToString() == null ? 1 : 0;
 
 
             return IsFilled == 0;
@@ -213,9 +213,9 @@ namespace carStore_Final
         //Fucntion to calculate the price of all the things that add to the product
         private void CalculatePrice()
         {
-            //this.Warning.Text = "";
+            this.LblWarning.Text = "";
             int price = 0;
-            if (ChkBoxMakeAndModel.SelectedItem != null & ChkBoxYear.SelectedItem != null)
+            if (ChkBoxMakeAndModel.SelectedItem.ToString() != null)
             {
                 string bicycle = this.ChkBoxMakeAndModel.SelectedItem.ToString();
                 int year = int.Parse(this.ChkBoxYear.SelectedItem.ToString());
@@ -372,7 +372,6 @@ namespace carStore_Final
                     default:
                         break;
                 }
-                CalculatePrice();
             }
             if (this.ChkBoxIsDiscBreak.Checked)
                 price += 1000;
@@ -419,7 +418,7 @@ namespace carStore_Final
                     ChkBoxYear.SetItemCheckState(x, CheckState.Unchecked);
                 }
             }
-            CalculatePrice();
+            //CalculatePrice();
         }
 
         private void ChkBoxIsDiscBreak_CheckedChanged(object sender, EventArgs e)

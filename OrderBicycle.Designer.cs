@@ -36,6 +36,7 @@
             this.ChkBoxIsDiscBreak = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblTotalPrice = new System.Windows.Forms.Label();
+            this.LblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -144,12 +145,21 @@
             this.LblTotalPrice.TabIndex = 7;
             this.LblTotalPrice.Text = "0";
             // 
+            // LblWarning
+            // 
+            this.LblWarning.AutoSize = true;
+            this.LblWarning.Location = new System.Drawing.Point(688, 519);
+            this.LblWarning.Name = "LblWarning";
+            this.LblWarning.Size = new System.Drawing.Size(0, 15);
+            this.LblWarning.TabIndex = 8;
+            // 
             // OrderBicycle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
+            this.Controls.Add(this.LblWarning);
             this.Controls.Add(this.LblTotalPrice);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ChkBoxIsDiscBreak);
@@ -175,5 +185,6 @@
         private CheckBox ChkBoxIsDiscBreak;
         private TextBox textBox1;
         private Label LblTotalPrice;
+        private Label LblWarning;
     }
 }
