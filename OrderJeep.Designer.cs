@@ -39,6 +39,7 @@
             this.ChkBoxIs4x4 = new System.Windows.Forms.CheckBox();
             this.ChkBoxIsMetallicColor = new System.Windows.Forms.CheckBox();
             this.ChkBoxIsMultimedia = new System.Windows.Forms.CheckBox();
+            this.LblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -67,9 +68,7 @@
             this.ChkBoxMakeAndModel.Name = "ChkBoxMakeAndModel";
             this.ChkBoxMakeAndModel.Size = new System.Drawing.Size(198, 130);
             this.ChkBoxMakeAndModel.TabIndex = 1;
-            this.ChkBoxMakeAndModel.SelectedIndexChanged += new System.EventHandler(this.OnContentChanged);
             this.ChkBoxMakeAndModel.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
-
             // 
             // ChkBoxYear
             // 
@@ -87,9 +86,7 @@
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(120, 148);
             this.ChkBoxYear.TabIndex = 2;
-            this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.OnContentChanged);
             this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.ChkBoxYear_SelectedIndexChanged);
-
             // 
             // ChkBoxColor
             // 
@@ -110,9 +107,7 @@
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
-            this.ChkBoxColor.SelectedIndexChanged += new System.EventHandler(this.OnContentChanged);
             this.ChkBoxColor.SelectedIndexChanged += new System.EventHandler(this.ChkBoxColor_SelectedIndexChanged);
-
             // 
             // BtnSubmitJeep
             // 
@@ -134,7 +129,6 @@
             this.ChkBoxDoorNumber.Name = "ChkBoxDoorNumber";
             this.ChkBoxDoorNumber.Size = new System.Drawing.Size(120, 40);
             this.ChkBoxDoorNumber.TabIndex = 7;
-            this.ChkBoxDoorNumber.SelectedIndexChanged += new System.EventHandler(this.OnContentChanged);
             this.ChkBoxDoorNumber.SelectedIndexChanged += new System.EventHandler(this.ChkBoxDoorNumber_SelectedIndexChanged);
             // 
             // TotalPriceTxt
@@ -169,7 +163,6 @@
             this.ChkBoxIs4x4.Text = "4x4 Version";
             this.ChkBoxIs4x4.UseVisualStyleBackColor = true;
             this.ChkBoxIs4x4.CheckedChanged += new System.EventHandler(this.OnContentChanged);
-
             // 
             // ChkBoxIsMetallicColor
             // 
@@ -192,12 +185,21 @@
             this.ChkBoxIsMultimedia.Text = "Multimedia Screen";
             this.ChkBoxIsMultimedia.UseVisualStyleBackColor = true;
             // 
+            // LblWarning
+            // 
+            this.LblWarning.AutoSize = true;
+            this.LblWarning.Location = new System.Drawing.Point(656, 563);
+            this.LblWarning.Name = "LblWarning";
+            this.LblWarning.Size = new System.Drawing.Size(0, 15);
+            this.LblWarning.TabIndex = 16;
+            // 
             // OrderJeep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
+            this.Controls.Add(this.LblWarning);
             this.Controls.Add(this.ChkBoxIsMultimedia);
             this.Controls.Add(this.ChkBoxIsMetallicColor);
             this.Controls.Add(this.ChkBoxIs4x4);
@@ -212,6 +214,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "OrderJeep";
             this.Text = "OrderJeep";
+            this.Load += new System.EventHandler(this.OrderJeep_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +233,6 @@
         private CheckBox ChkBoxIs4x4;
         private CheckBox ChkBoxIsMetallicColor;
         private CheckBox ChkBoxIsMultimedia;
+        private Label LblWarning;
     }
 }

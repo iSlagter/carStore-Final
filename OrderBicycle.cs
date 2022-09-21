@@ -25,9 +25,9 @@ namespace carStore_Final
         private bool IsEverythingFilled()
         {
             int IsFilled = 0;
-            IsFilled += this.ChkBoxMakeAndModel.SelectedItem.ToString() == null ? 1 : 0;
-            IsFilled += this.ChkBoxYear.SelectedItem.ToString() == null ? 1 : 0;
-            IsFilled += this.ChkBoxColor.SelectedItem.ToString() == null ? 1 : 0;
+            IsFilled += this.ChkBoxMakeAndModel.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxYear.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxColor.SelectedItem == null ? 1 : 0;
 
 
             return IsFilled == 0;

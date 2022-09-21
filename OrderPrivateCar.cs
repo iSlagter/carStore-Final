@@ -22,10 +22,10 @@ namespace carStore_Final
         private bool IsEverythingFilled()
         {
             int IsFilled = 0;
-            IsFilled += this.ChkBoxMakeAndModel.SelectedItem.ToString() == null ? 1 : 0;
-            IsFilled += this.ChkBoxYear.SelectedItem.ToString() == null ? 1 : 0;
-            IsFilled += this.ChkBoxColor.SelectedItem.ToString() == null ? 1 : 0;
-            IsFilled += this.ChkBoxDoorNumber.SelectedItem.ToString() == null ? 1 : 0;
+            IsFilled += this.ChkBoxMakeAndModel.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxYear.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxColor.SelectedItem == null ? 1 : 0;
+            IsFilled += this.ChkBoxDoorNumber.SelectedItem == null ? 1 : 0;
 
             return IsFilled == 0;
         }
@@ -233,6 +233,8 @@ namespace carStore_Final
                 //Close the form
                 this.Close();
             }
+            //Send a warn text that for to click on submit you need to fill all the fields
+            this.LblWarning.Text = "Fill All Fields!";
         }
 
         //Fucntion to calculate the price of all the things that add to the product
@@ -474,6 +476,11 @@ namespace carStore_Final
         private void ChkBoxIsMetallicColor_CheckedChanged(object sender, EventArgs e)
         {
             CalculatePrice();
+        }
+
+        private void OrderPrivateCar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

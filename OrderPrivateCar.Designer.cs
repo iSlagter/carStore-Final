@@ -39,6 +39,7 @@
             this.LblTotalPrice = new System.Windows.Forms.Label();
             this.ChkBoxIsMultimedia = new System.Windows.Forms.CheckBox();
             this.ChkBoxIsMetallicColor = new System.Windows.Forms.CheckBox();
+            this.LblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +54,7 @@
             // 
             // BtnSubmitPrivateCar
             // 
-            this.BtnSubmitPrivateCar.Location = new System.Drawing.Point(639, 541);
+            this.BtnSubmitPrivateCar.Location = new System.Drawing.Point(656, 533);
             this.BtnSubmitPrivateCar.Name = "BtnSubmitPrivateCar";
             this.BtnSubmitPrivateCar.Size = new System.Drawing.Size(75, 23);
             this.BtnSubmitPrivateCar.TabIndex = 1;
@@ -181,12 +182,21 @@
             this.ChkBoxIsMetallicColor.UseVisualStyleBackColor = true;
             this.ChkBoxIsMetallicColor.CheckedChanged += new System.EventHandler(this.ChkBoxIsMetallicColor_CheckedChanged);
             // 
+            // LblWarning
+            // 
+            this.LblWarning.AutoSize = true;
+            this.LblWarning.Location = new System.Drawing.Point(656, 563);
+            this.LblWarning.Name = "LblWarning";
+            this.LblWarning.Size = new System.Drawing.Size(0, 15);
+            this.LblWarning.TabIndex = 11;
+            // 
             // OrderPrivateCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
+            this.Controls.Add(this.LblWarning);
             this.Controls.Add(this.ChkBoxIsMetallicColor);
             this.Controls.Add(this.ChkBoxIsMultimedia);
             this.Controls.Add(this.LblTotalPrice);
@@ -200,6 +210,7 @@
             this.Controls.Add(this.label1);
             this.Name = "OrderPrivateCar";
             this.Text = "OrderPrivateCar";
+            this.Load += new System.EventHandler(this.OrderPrivateCar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,5 +229,6 @@
         private Label LblTotalPrice;
         private CheckBox ChkBoxIsMultimedia;
         private CheckBox ChkBoxIsMetallicColor;
+        private Label LblWarning;
     }
 }

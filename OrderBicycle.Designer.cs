@@ -51,7 +51,7 @@
             // 
             // BtnSubmitBicycle
             // 
-            this.BtnSubmitBicycle.Location = new System.Drawing.Point(668, 551);
+            this.BtnSubmitBicycle.Location = new System.Drawing.Point(656, 533);
             this.BtnSubmitBicycle.Name = "BtnSubmitBicycle";
             this.BtnSubmitBicycle.Size = new System.Drawing.Size(75, 23);
             this.BtnSubmitBicycle.TabIndex = 1;
@@ -148,7 +148,7 @@
             // LblWarning
             // 
             this.LblWarning.AutoSize = true;
-            this.LblWarning.Location = new System.Drawing.Point(688, 519);
+            this.LblWarning.Location = new System.Drawing.Point(656, 563);
             this.LblWarning.Name = "LblWarning";
             this.LblWarning.Size = new System.Drawing.Size(0, 15);
             this.LblWarning.TabIndex = 8;

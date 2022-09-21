@@ -36,6 +36,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblTotalPrice = new System.Windows.Forms.Label();
             this.ChkBoxIsMaunalGear = new System.Windows.Forms.CheckBox();
+            this.LblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +51,7 @@
             // 
             // BtnSubmitMotorcycle
             // 
-            this.BtnSubmitMotorcycle.Location = new System.Drawing.Point(648, 543);
+            this.BtnSubmitMotorcycle.Location = new System.Drawing.Point(656, 533);
             this.BtnSubmitMotorcycle.Name = "BtnSubmitMotorcycle";
             this.BtnSubmitMotorcycle.Size = new System.Drawing.Size(75, 23);
             this.BtnSubmitMotorcycle.TabIndex = 1;
@@ -145,12 +146,21 @@
             this.ChkBoxIsMaunalGear.UseVisualStyleBackColor = true;
             this.ChkBoxIsMaunalGear.CheckedChanged += new System.EventHandler(this.ChkBoxIsMaunalGear_CheckedChanged);
             // 
+            // LblWarning
+            // 
+            this.LblWarning.AutoSize = true;
+            this.LblWarning.Location = new System.Drawing.Point(656, 563);
+            this.LblWarning.Name = "LblWarning";
+            this.LblWarning.Size = new System.Drawing.Size(0, 15);
+            this.LblWarning.TabIndex = 8;
+            // 
             // OrderMotorcycle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(760, 592);
+            this.Controls.Add(this.LblWarning);
             this.Controls.Add(this.ChkBoxIsMaunalGear);
             this.Controls.Add(this.LblTotalPrice);
             this.Controls.Add(this.textBox1);
@@ -176,5 +186,6 @@
         private TextBox textBox1;
         private Label LblTotalPrice;
         private CheckBox ChkBoxIsMaunalGear;
+        private Label LblWarning;
     }
 }
