@@ -619,5 +619,10 @@ namespace carStore_Final
         {
 
         }
+
+        private void ChkBoxIsMultimedia_CheckedChanged(object sender, EventArgs e)
+        {
+            CalculatePrice();
+        }
     }
 }

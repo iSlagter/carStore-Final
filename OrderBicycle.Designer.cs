@@ -89,7 +89,7 @@
             "Orange",
             "Gray",
             "Silver"});
-            this.ChkBoxColor.Location = new System.Drawing.Point(212, 92);
+            this.ChkBoxColor.Location = new System.Drawing.Point(407, 92);
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
@@ -107,10 +107,11 @@
             "2020",
             "2021",
             "2022"});
-            this.ChkBoxYear.Location = new System.Drawing.Point(379, 92);
+            this.ChkBoxYear.Location = new System.Drawing.Point(237, 92);
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(120, 148);
             this.ChkBoxYear.TabIndex = 4;
+            this.ChkBoxYear.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.OnContentChanged);
             this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.ChkBoxYear_SelectedIndexChanged);
             // 
             // ChkBoxIsDiscBreak

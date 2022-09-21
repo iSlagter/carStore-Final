@@ -69,7 +69,7 @@
             "BMW, F650GS",
             "Sanyang, Joymax",
             "Yamaha, Tmax"});
-            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(68, 163);
+            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(57, 116);
             this.ChkBoxMakeAndModel.Name = "ChkBoxMakeAndModel";
             this.ChkBoxMakeAndModel.Size = new System.Drawing.Size(125, 112);
             this.ChkBoxMakeAndModel.TabIndex = 2;
@@ -90,7 +90,7 @@
             "Orange",
             "Gray",
             "Silver"});
-            this.ChkBoxColor.Location = new System.Drawing.Point(239, 163);
+            this.ChkBoxColor.Location = new System.Drawing.Point(430, 116);
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
@@ -108,10 +108,11 @@
             "2020",
             "2021",
             "2022"});
-            this.ChkBoxYear.Location = new System.Drawing.Point(412, 163);
+            this.ChkBoxYear.Location = new System.Drawing.Point(239, 116);
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(120, 148);
             this.ChkBoxYear.TabIndex = 4;
+            this.ChkBoxYear.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.OnContentChanged);
             this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.ChkBoxYear_SelectedIndexChanged);
             // 
             // textBox1
@@ -138,7 +139,7 @@
             // ChkBoxIsMaunalGear
             // 
             this.ChkBoxIsMaunalGear.AutoSize = true;
-            this.ChkBoxIsMaunalGear.Location = new System.Drawing.Point(68, 440);
+            this.ChkBoxIsMaunalGear.Location = new System.Drawing.Point(57, 392);
             this.ChkBoxIsMaunalGear.Name = "ChkBoxIsMaunalGear";
             this.ChkBoxIsMaunalGear.Size = new System.Drawing.Size(134, 19);
             this.ChkBoxIsMaunalGear.TabIndex = 7;

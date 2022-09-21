@@ -71,7 +71,7 @@
             "Hyundai, Ionic",
             "Tesla, Model 3",
             "BMW, M2"});
-            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(16, 93);
+            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(69, 93);
             this.ChkBoxMakeAndModel.Name = "ChkBoxMakeAndModel";
             this.ChkBoxMakeAndModel.Size = new System.Drawing.Size(120, 94);
             this.ChkBoxMakeAndModel.TabIndex = 2;
@@ -92,7 +92,7 @@
             "Orange",
             "Gray",
             "Silver"});
-            this.ChkBoxColor.Location = new System.Drawing.Point(469, 93);
+            this.ChkBoxColor.Location = new System.Drawing.Point(560, 93);
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
@@ -110,10 +110,11 @@
             "2020",
             "2021",
             "2022"});
-            this.ChkBoxYear.Location = new System.Drawing.Point(182, 93);
+            this.ChkBoxYear.Location = new System.Drawing.Point(231, 93);
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(90, 148);
             this.ChkBoxYear.TabIndex = 4;
+            this.ChkBoxYear.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.OnContentChanged);
             this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.ChkBoxYear_SelectedIndexChanged);
             // 
             // ChkBoxDoorNumber
@@ -122,7 +123,7 @@
             this.ChkBoxDoorNumber.Items.AddRange(new object[] {
             "3 Doors (Short)",
             "5 Doors (Long)"});
-            this.ChkBoxDoorNumber.Location = new System.Drawing.Point(302, 93);
+            this.ChkBoxDoorNumber.Location = new System.Drawing.Point(366, 93);
             this.ChkBoxDoorNumber.Name = "ChkBoxDoorNumber";
             this.ChkBoxDoorNumber.Size = new System.Drawing.Size(120, 40);
             this.ChkBoxDoorNumber.TabIndex = 5;
@@ -131,7 +132,7 @@
             // ChkBoxIsHybrid
             // 
             this.ChkBoxIsHybrid.AutoSize = true;
-            this.ChkBoxIsHybrid.Location = new System.Drawing.Point(36, 387);
+            this.ChkBoxIsHybrid.Location = new System.Drawing.Point(69, 346);
             this.ChkBoxIsHybrid.Name = "ChkBoxIsHybrid";
             this.ChkBoxIsHybrid.Size = new System.Drawing.Size(103, 19);
             this.ChkBoxIsHybrid.TabIndex = 6;
@@ -163,7 +164,7 @@
             // ChkBoxIsMultimedia
             // 
             this.ChkBoxIsMultimedia.AutoSize = true;
-            this.ChkBoxIsMultimedia.Location = new System.Drawing.Point(37, 417);
+            this.ChkBoxIsMultimedia.Location = new System.Drawing.Point(69, 386);
             this.ChkBoxIsMultimedia.Name = "ChkBoxIsMultimedia";
             this.ChkBoxIsMultimedia.Size = new System.Drawing.Size(125, 19);
             this.ChkBoxIsMultimedia.TabIndex = 9;
@@ -174,7 +175,7 @@
             // ChkBoxIsMetallicColor
             // 
             this.ChkBoxIsMetallicColor.AutoSize = true;
-            this.ChkBoxIsMetallicColor.Location = new System.Drawing.Point(37, 450);
+            this.ChkBoxIsMetallicColor.Location = new System.Drawing.Point(69, 430);
             this.ChkBoxIsMetallicColor.Name = "ChkBoxIsMetallicColor";
             this.ChkBoxIsMetallicColor.Size = new System.Drawing.Size(100, 19);
             this.ChkBoxIsMetallicColor.TabIndex = 10;

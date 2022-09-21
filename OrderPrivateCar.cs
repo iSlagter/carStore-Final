@@ -244,12 +244,12 @@ namespace carStore_Final
             int price = 0;
             if (ChkBoxMakeAndModel.SelectedItem != null)
             {
-                string Jeep = this.ChkBoxMakeAndModel.SelectedItem.ToString();
+                string privateCar = this.ChkBoxMakeAndModel.SelectedItem.ToString();
                 string year = this.ChkBoxYear.SelectedItem.ToString();
 
 
-                //Add the price by the Make, Model and Year of the Jeep
-                switch (Jeep)
+                //Add the price by the Make, Model and Year of the Private Car
+                switch (privateCar)
                 {
                     case "Toyota, Corolla":
                         switch (year)
@@ -481,6 +481,16 @@ namespace carStore_Final
         private void OrderPrivateCar_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void OnContentChanged(object sender, EventArgs e)
+        {
+            CalculatePrice();
+        }
+
+        private void OnContentChanged(object sender, ItemCheckEventArgs e)
+        {
+            CalculatePrice();
         }
     }
 }

@@ -64,7 +64,7 @@
             "Jeep,Grand Cherokie",
             "Jeep, Wrengler ",
             "Land Rover, Range Rover"});
-            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(12, 98);
+            this.ChkBoxMakeAndModel.Location = new System.Drawing.Point(40, 98);
             this.ChkBoxMakeAndModel.Name = "ChkBoxMakeAndModel";
             this.ChkBoxMakeAndModel.Size = new System.Drawing.Size(198, 130);
             this.ChkBoxMakeAndModel.TabIndex = 1;
@@ -82,10 +82,11 @@
             "2020",
             "2021",
             "2022"});
-            this.ChkBoxYear.Location = new System.Drawing.Point(239, 98);
+            this.ChkBoxYear.Location = new System.Drawing.Point(268, 98);
             this.ChkBoxYear.Name = "ChkBoxYear";
             this.ChkBoxYear.Size = new System.Drawing.Size(120, 148);
             this.ChkBoxYear.TabIndex = 2;
+            this.ChkBoxYear.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.OnContentChanged);
             this.ChkBoxYear.SelectedIndexChanged += new System.EventHandler(this.ChkBoxYear_SelectedIndexChanged);
             // 
             // ChkBoxColor
@@ -103,7 +104,7 @@
             "Orange",
             "Gray",
             "Silver"});
-            this.ChkBoxColor.Location = new System.Drawing.Point(516, 98);
+            this.ChkBoxColor.Location = new System.Drawing.Point(583, 98);
             this.ChkBoxColor.Name = "ChkBoxColor";
             this.ChkBoxColor.Size = new System.Drawing.Size(120, 202);
             this.ChkBoxColor.TabIndex = 3;
@@ -125,7 +126,7 @@
             this.ChkBoxDoorNumber.Items.AddRange(new object[] {
             "3 Doors (Short)",
             "5 Doors (Long)"});
-            this.ChkBoxDoorNumber.Location = new System.Drawing.Point(375, 98);
+            this.ChkBoxDoorNumber.Location = new System.Drawing.Point(415, 98);
             this.ChkBoxDoorNumber.Name = "ChkBoxDoorNumber";
             this.ChkBoxDoorNumber.Size = new System.Drawing.Size(120, 40);
             this.ChkBoxDoorNumber.TabIndex = 7;
@@ -156,7 +157,7 @@
             // ChkBoxIs4x4
             // 
             this.ChkBoxIs4x4.AutoSize = true;
-            this.ChkBoxIs4x4.Location = new System.Drawing.Point(12, 268);
+            this.ChkBoxIs4x4.Location = new System.Drawing.Point(40, 268);
             this.ChkBoxIs4x4.Name = "ChkBoxIs4x4";
             this.ChkBoxIs4x4.Size = new System.Drawing.Size(85, 19);
             this.ChkBoxIs4x4.TabIndex = 11;
@@ -167,7 +168,7 @@
             // ChkBoxIsMetallicColor
             // 
             this.ChkBoxIsMetallicColor.AutoSize = true;
-            this.ChkBoxIsMetallicColor.Location = new System.Drawing.Point(12, 293);
+            this.ChkBoxIsMetallicColor.Location = new System.Drawing.Point(40, 298);
             this.ChkBoxIsMetallicColor.Name = "ChkBoxIsMetallicColor";
             this.ChkBoxIsMetallicColor.Size = new System.Drawing.Size(100, 19);
             this.ChkBoxIsMetallicColor.TabIndex = 14;
@@ -178,12 +179,13 @@
             // ChkBoxIsMultimedia
             // 
             this.ChkBoxIsMultimedia.AutoSize = true;
-            this.ChkBoxIsMultimedia.Location = new System.Drawing.Point(12, 318);
+            this.ChkBoxIsMultimedia.Location = new System.Drawing.Point(40, 331);
             this.ChkBoxIsMultimedia.Name = "ChkBoxIsMultimedia";
             this.ChkBoxIsMultimedia.Size = new System.Drawing.Size(125, 19);
             this.ChkBoxIsMultimedia.TabIndex = 15;
             this.ChkBoxIsMultimedia.Text = "Multimedia Screen";
             this.ChkBoxIsMultimedia.UseVisualStyleBackColor = true;
+            this.ChkBoxIsMultimedia.CheckedChanged += new System.EventHandler(this.ChkBoxIsMultimedia_CheckedChanged);
             // 
             // LblWarning
             // 

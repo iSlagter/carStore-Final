@@ -218,7 +218,7 @@ namespace carStore_Final
             if (ChkBoxMakeAndModel.SelectedItem.ToString() != null)
             {
                 string bicycle = this.ChkBoxMakeAndModel.SelectedItem.ToString();
-                int year = int.Parse(this.ChkBoxYear.SelectedItem.ToString());
+                string year = ChkBoxYear.SelectedItem.ToString();
 
 
                 //Add the price by the Make, Model and Year of the Jeep
@@ -227,28 +227,28 @@ namespace carStore_Final
                     case "Trek, Marlin":
                         switch (year)
                         {
-                            case 2015:
+                            case "2015":
                                 price += 99000;
                                 break;
-                            case 2016:
+                            case "2016":
                                 price += 102000;
                                 break;
-                            case 2017:
+                            case "2017":
                                 price += 105000;
                                 break;
-                            case 2018:
+                            case "2018":
                                 price += 120000;
                                 break;
-                            case 2019:
+                            case "2019":
                                 price += 160000;
                                 break;
-                            case 2020:
+                            case "2020":
                                 price += 175000;
                                 break;
-                            case 2021:
+                            case "2021":
                                 price += 185000;
                                 break;
-                            case 2022:
+                            case "2022":
                                 price += 250000;
                                 break;
                         }
@@ -256,116 +256,116 @@ namespace carStore_Final
                     case "Cannondale, SuperSix":
                         switch (year)
                         {
-                            case 2015:
-                                price = 99000;
+                            case "2015":
+                                price += 99000;
                                 break;
-                            case 2016:
-                                price = 102000;
+                            case "2016":
+                                price += 102000;
                                 break;
-                            case 2017:
-                                price = 105000;
+                            case "2017":
+                                price += 105000;
                                 break;
-                            case 2018:
-                                price = 120000;
+                            case "2018":
+                                price += 120000;
                                 break;
-                            case 2019:
-                                price = 160000;
+                            case "2019":
+                                price += 160000;
                                 break;
-                            case 2020:
-                                price = 175000;
+                            case "2020":
+                                price += 175000;
                                 break;
-                            case 2021:
-                                price = 185000;
+                            case "2021":
+                                price += 185000;
                                 break;
-                            case 2022:
-                                price = 250000;
+                            case "2022":
+                                price += 250000;
                                 break;
                         }
                         break;
                     case "Mongoose, Salvo":
                         switch (year)
                         {
-                            case 2015:
-                                price = 99000;
+                            case "2015":
+                                price += 99000;
                                 break;
-                            case 2016:
-                                price = 102000;
+                            case "2016":
+                                price += 102000;
                                 break;
-                            case 2017:
-                                price = 105000;
+                            case "2017":
+                                price += 105000;
                                 break;
-                            case 2018:
-                                price = 120000;
+                            case "2018":
+                                price += 120000;
                                 break;
-                            case 2019:
-                                price = 160000;
+                            case "2019":
+                                price += 160000;
                                 break;
-                            case 2020:
-                                price = 175000;
+                            case "2020":
+                                price += 175000;
                                 break;
-                            case 2021:
-                                price = 185000;
+                            case "2021":
+                                price += 185000;
                                 break;
-                            case 2022:
-                                price = 250000;
+                            case "2022":
+                                price += 250000;
                                 break;
                         }
                         break;
                     case "Mongoose, BMX":
                         switch (year)
                         {
-                            case 2015:
-                                price = 99000;
+                            case "2015":
+                                price += 99000;
                                 break;
-                            case 2016:
-                                price = 102000;
+                            case "2016":
+                                price += 102000;
                                 break;
-                            case 2017:
-                                price = 105000;
+                            case "2017":
+                                price += 105000;
                                 break;
-                            case 2018:
-                                price = 120000;
+                            case "2018":
+                                price += 120000;
                                 break;
-                            case 2019:
-                                price = 160000;
+                            case "2019":
+                                price += 160000;
                                 break;
-                            case 2020:
-                                price = 175000;
+                            case "2020":
+                                price += 175000;
                                 break;
-                            case 2021:
-                                price = 185000;
+                            case "2021":
+                                price += 185000;
                                 break;
-                            case 2022:
-                                price = 250000;
+                            case "2022":
+                                price += 250000;
                                 break;
                         }
                         break;
                     case "Specialized, Levo":
                         switch (year)
                         {
-                            case 2015:
-                                price = 99000;
+                            case "2015":
+                                price += 99000;
                                 break;
-                            case 2016:
-                                price = 102000;
+                            case "2016":
+                                price += 102000;
                                 break;
-                            case 2017:
-                                price = 105000;
+                            case "2017":
+                                price += 105000;
                                 break;
-                            case 2018:
-                                price = 120000;
+                            case "2018":
+                                price += 120000;
                                 break;
-                            case 2019:
-                                price = 160000;
+                            case "2019":
+                                price += 160000;
                                 break;
-                            case 2020:
-                                price = 175000;
+                            case "2020":
+                                price += 175000;
                                 break;
-                            case 2021:
-                                price = 185000;
+                            case "2021":
+                                price += 185000;
                                 break;
-                            case 2022:
-                                price = 250000;
+                            case "2022":
+                                price += 250000;
                                 break;
                         }
                         break;
@@ -374,7 +374,7 @@ namespace carStore_Final
                 }
             }
             if (this.ChkBoxIsDiscBreak.Checked)
-                price += 1000;
+                price += 900;
 
             this.LblTotalPrice.Text = price.ToString();
         }
@@ -390,7 +390,6 @@ namespace carStore_Final
                     ChkBoxMakeAndModel.SetItemCheckState(x, CheckState.Unchecked);
                 }
             }
-            CalculatePrice();
         }
 
         private void ChkBoxColor_SelectedIndexChanged(object sender, EventArgs e)
@@ -404,7 +403,6 @@ namespace carStore_Final
                     ChkBoxColor.SetItemCheckState(x, CheckState.Unchecked);
                 }
             }
-            CalculatePrice();
         }
 
         private void ChkBoxYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -418,11 +416,21 @@ namespace carStore_Final
                     ChkBoxYear.SetItemCheckState(x, CheckState.Unchecked);
                 }
             }
-            //CalculatePrice();
         }
 
         private void ChkBoxIsDiscBreak_CheckedChanged(object sender, EventArgs e)
         {
             CalculatePrice();
         }
-    } }
+
+        protected void OnContentChanged(object sender, EventArgs e)
+        {
+            CalculatePrice();
+        }
+
+        private void OnContentChanged(object sender, ItemCheckEventArgs e)
+        {
+            CalculatePrice();
+        }
+    }
+}
