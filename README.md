@@ -19,4 +19,4 @@ Final project C# OOP HIT
 ## UML diagrams
 
 
-![UML](carStore-UML)
+![UML](carStore-UML.png)
