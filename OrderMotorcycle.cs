@@ -78,28 +78,28 @@ namespace carStore_Final
                         switch (Year)
                         {
                             case 2015:
-                                Price = 99000;
+                                Price = 35000;
                                 break;
                             case 2016:
-                                Price = 102000;
+                                Price = 38000;
                                 break;
                             case 2017:
-                                Price = 105000;
+                                Price = 40000;
                                 break;
                             case 2018:
-                                Price = 120000;
+                                Price = 45000;
                                 break;
                             case 2019:
-                                Price = 160000;
+                                Price = 50000;
                                 break;
                             case 2020:
-                                Price = 175000;
+                                Price = 60000;
                                 break;
                             case 2021:
-                                Price = 185000;
+                                Price = 90000;
                                 break;
                             case 2022:
-                                Price = 250000;
+                                Price = 120000;
                                 break;
                         }
                         break;
@@ -107,28 +107,28 @@ namespace carStore_Final
                         switch (Year)
                         {
                             case 2015:
-                                Price = 99000;
+                                Price = 49000;
                                 break;
                             case 2016:
-                                Price = 102000;
+                                Price = 50000;
                                 break;
                             case 2017:
-                                Price = 105000;
+                                Price = 69000;
                                 break;
                             case 2018:
-                                Price = 120000;
+                                Price = 76000;
                                 break;
                             case 2019:
-                                Price = 160000;
+                                Price = 80000;
                                 break;
                             case 2020:
-                                Price = 175000;
+                                Price = 90000;
                                 break;
                             case 2021:
-                                Price = 185000;
+                                Price = 123000;
                                 break;
                             case 2022:
-                                Price = 250000;
+                                Price = 130000;
                                 break;
                         }
                         break;
@@ -136,28 +136,28 @@ namespace carStore_Final
                         switch (Year)
                         {
                             case 2015:
-                                Price = 99000;
+                                Price = 64000;
                                 break;
                             case 2016:
-                                Price = 102000;
+                                Price = 87000;
                                 break;
                             case 2017:
-                                Price = 105000;
+                                Price = 98000;
                                 break;
                             case 2018:
-                                Price = 120000;
+                                Price = 103000;
                                 break;
                             case 2019:
-                                Price = 160000;
+                                Price = 120000;
                                 break;
                             case 2020:
-                                Price = 175000;
+                                Price = 127000;
                                 break;
                             case 2021:
-                                Price = 185000;
+                                Price = 130000;
                                 break;
                             case 2022:
-                                Price = 250000;
+                                Price = 150000;
                                 break;
                         }
                         break;
