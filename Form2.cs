@@ -91,6 +91,7 @@ namespace carStore_Final
                 VehiclesDeletes[i].Click += new EventHandler(Delete_Click);
 
                 top += 40;
+                left = 13;
 
             }
             for (int i = 0; i < this.Vehicles.Count; i++)
